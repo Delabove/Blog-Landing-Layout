@@ -16,28 +16,29 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Pagination from '@material-ui/lab/Pagination';
-import { findByPlaceholderText } from '@testing-library/react';
+import Paper from '@material-ui/core/Paper';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+
 
 
 
 
 
 const useStyles = makeStyles((theme) => ({
+
   appBar:{
     backgroundColor: "#fff"
   },
-  container: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
+
   logo:{
-    width: '150px',
-    height: '150px',
+    width: '250px',
+    height: '250px',
     borderRadius: '50%',
     overflow: 'hidden',
     position: "center",
   },
+
   hero: {
     backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)), url(${Image})`,
     height: "500px",
@@ -51,20 +52,24 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
     fontSize: "4rem",
   },
+
   blogsContainer:{
-    paddingTop: theme.spacing(3)
+    paddingTop: theme.spacing(3),
+
   },
+
   blogTitle:{
-    fontWeight: 800,
+    // fontWeight: 800,
     paddingBottom: theme.spacing(3),
-    float: "left",
-    marginLeft: "0",
+
   },
+
   card: {
     maxWidth: '75%',
     justifyContent: "center",
     alignItems: "center",
   },
+
   media: {
     height: 540,
     maxWidth: '100%',
@@ -72,6 +77,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
   },
+
   '& > *': {
     marginTop: theme.spacing(2),
   },
@@ -79,17 +85,25 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center"
   }
+
 }));
 
 function App() {
 
   const classes = useStyles();
 
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   return (
     <div className="App">
     <AppBar className={classes.appBar} position="static">
         <Toolbar>
           <img className={classes.logo} src={Logo} alt="Logo" />
+
         </Toolbar>
 
       </AppBar>
@@ -99,7 +113,7 @@ function App() {
       </Box>
 
       <Container maxWidth="lg" className={classes.blogsContainer}>
-          <Typography variant="h4" className={classes.blogTitle}>
+          <Typography variant="h1" className={classes.blogTitle}>
             Articles
           </Typography>
       </Container>
@@ -123,7 +137,6 @@ function App() {
           <Typography>
             Published: August 1, 2020
           </Typography>
-
         </CardContent>
       </CardActionArea>
       <CardActions>
@@ -297,6 +310,23 @@ function App() {
       <Pagination count={10} />
     </Box>
 
+    <Typography variant="h1" className={classes.bestList}>
+      Most Popular
+    </Typography>
+
+ <Paper className={classes.root}>
+      <Tabs
+        value={value}
+        onChange={handleChange}
+        indicatorColor="primary"
+        textColor="primary"
+        centered
+      >
+        <Tab label="Most Viewed" />
+        <Tab label="Most Commented" />
+        <Tab label="Most Shared" />
+      </Tabs>
+    </Paper>
 
     </div>
   );
