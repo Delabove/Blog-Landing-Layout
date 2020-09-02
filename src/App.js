@@ -15,6 +15,8 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
+import Pagination from '@material-ui/lab/Pagination';
+import { findByPlaceholderText } from '@testing-library/react';
 
 
 
@@ -23,6 +25,11 @@ import Button from '@material-ui/core/Button';
 const useStyles = makeStyles((theme) => ({
   appBar:{
     backgroundColor: "#fff"
+  },
+  container: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   logo:{
     width: '150px',
@@ -54,11 +61,23 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "0",
   },
   card: {
-    maxWidth: '75%'
+    maxWidth: '75%',
+    justifyContent: "center",
+    alignItems: "center",
   },
   media: {
     height: 540,
-    maxWidth: '75%'
+    maxWidth: '100%',
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  '& > *': {
+    marginTop: theme.spacing(2),
+  },
+  paginationContainer: {
+    display: "flex",
+    justifyContent: "center"
   }
 }));
 
@@ -85,7 +104,7 @@ function App() {
           </Typography>
       </Container>
 
-      <Grid container spacing={(3)}>
+      <Grid container className={classes.container} spacing={(3)}>
         <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
           <CardActionArea>
@@ -101,6 +120,10 @@ function App() {
           <Typography variant="body2" color="textSecondary" component="p">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eum ad maxime magni similique illo aperiam excepturi, totam, quisquam consequuntur necessitatibus voluptas? Ducimus fugit beatae esse pariatur, in illum repudiandae.
           </Typography>
+          <Typography>
+            Published: August 1, 2020
+          </Typography>
+
         </CardContent>
       </CardActionArea>
       <CardActions>
@@ -128,6 +151,9 @@ function App() {
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat in quibusdam asperiores doloremque aliquid distinctio accusamus expedita dignissimos veritatis dicta laudantium consequatur ipsum nobis vel eum, sit similique obcaecati minima?
+          </Typography>
+          <Typography>
+            Published: August 1, 2020
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -157,6 +183,9 @@ function App() {
           <Typography variant="body2" color="textSecondary" component="p">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo cum, consequuntur labore, molestiae aut non suscipit possimus ab nihil in, illo facere culpa praesentium placeat. Inventore accusantium repellendus sit dolor?
           </Typography>
+          <Typography>
+            Published: August 1, 2020
+          </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
@@ -184,6 +213,9 @@ function App() {
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur illo molestiae non ut odio dolorem dolor nulla inventore suscipit veritatis laboriosam repudiandae pariatur animi, accusantium corporis. Veritatis excepturi dolor maxime!
+          </Typography>
+          <Typography>
+            Published: August 1, 2020
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -213,6 +245,9 @@ function App() {
           <Typography variant="body2" color="textSecondary" component="p">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam aut ducimus dolore deleniti quod. Dolores suscipit neque vel dicta, amet consectetur earum dignissimos iusto nemo officiis voluptas error, sapiente laborum.
           </Typography>
+          <Typography>
+            Published: August 1, 2020
+          </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
@@ -241,6 +276,9 @@ function App() {
           <Typography variant="body2" color="textSecondary" component="p">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore culpa quasi non delectus adipisci, fuga molestias tempora debitis eveniet minus placeat obcaecati fugit ab doloribus, rerum vitae perferendis asperiores earum.
           </Typography>
+          <Typography>
+            Published: August 1, 2020
+          </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
@@ -255,6 +293,9 @@ function App() {
         </Grid>
         </Grid>
 
+    <Box my={4} className={classes.paginationContainer}>
+      <Pagination count={10} />
+    </Box>
 
 
     </div>
