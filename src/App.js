@@ -22,6 +22,7 @@ import Tab from '@material-ui/core/Tab';
 import Divider from '@material-ui/core/Divider';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import Link from '@material-ui/core/Link';
+import NewsletterForm from './components/NewsletterForm';
 
 
 
@@ -161,6 +162,7 @@ function App() {
             Articles
           </Typography>
       </Container>
+      <NewsletterForm />
 
       <Grid
       container
