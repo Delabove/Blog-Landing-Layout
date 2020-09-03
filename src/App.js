@@ -8,7 +8,7 @@ import Box from '@material-ui/core/Box'
 import Image from '../src/img/F.png';
 import Logo from '../src/img/logo.png';
 import { Container } from '@material-ui/core/';
-import { Grid } from '@material-ui/core/';
+import Grid from "@material-ui/core/Grid";
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -19,6 +19,9 @@ import Pagination from '@material-ui/lab/Pagination';
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import Divider from '@material-ui/core/Divider';
+import BottomNavigation from '@material-ui/core/BottomNavigation';
+
 
 
 
@@ -32,8 +35,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   logo:{
-    width: '250px',
-    height: '250px',
+    width: '200px',
+    height: '200px',
     borderRadius: '50%',
     overflow: 'hidden',
     position: "center",
@@ -51,39 +54,82 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     color: "#fff",
     fontSize: "4rem",
-  },
-
-  blogsContainer:{
-    paddingTop: theme.spacing(3),
 
   },
+
+  blogsContainer: {
+    paddingTop: theme.spacing(20),
+
+
+  },
+
+  // gridContainer: {
+  //   marginLeft: theme.spacing(20, 'auto'), // '8px auto'
+  // },
 
   blogTitle:{
-    // fontWeight: 800,
+
     paddingBottom: theme.spacing(3),
 
   },
 
   card: {
-    maxWidth: '75%',
-    justifyContent: "center",
-    alignItems: "center",
+
+    maxWidth: '100%',
+    margin: theme.spacing(3)
+
   },
 
   media: {
     height: 540,
-    maxWidth: '100%',
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
+
   },
 
-  '& > *': {
-    marginTop: theme.spacing(2),
+  cardActions: {
+    display: "flex",
+    margin: "0 10px",
+    justifyContent: "space-between"
   },
+
+  author: {
+    display: "flex"
+  },
+
   paginationContainer: {
     display: "flex",
-    justifyContent: "center"
+    justifyContent: "center",
+    marginBottom: 150,
+    marginTop: 150
+  },
+
+  tabs: {
+    marginBottom: 150,
+    marginTop: 150,
+  } ,
+
+  archives:{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: "center",
+
+    '& > *': {
+      margin: theme.spacing(5),
+      width: theme.spacing(50),
+      height: theme.spacing(50),
+      backgroundColor: '#D3D3D3',
+  },
+},
+  bottomNav:{
+    backgroundColor: "#000",
+  },
+
+  copyright:{
+    color: '#fff',
+    height: '300',
+    fontSize: 20,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 
 }));
@@ -100,16 +146,14 @@ function App() {
 
   return (
     <div className="App">
-    <AppBar className={classes.appBar} position="static">
+      <AppBar className={classes.appBar} position="static">
         <Toolbar>
           <img className={classes.logo} src={Logo} alt="Logo" />
-
         </Toolbar>
-
       </AppBar>
 
       <Box>
-        <Box className={classes.hero}> React Blog w/ Hero Image</Box>
+        <Box className={classes.hero}> React Blog</Box>
       </Box>
 
       <Container maxWidth="lg" className={classes.blogsContainer}>
@@ -118,9 +162,16 @@ function App() {
           </Typography>
       </Container>
 
-      <Grid container className={classes.container} spacing={(3)}>
+      <Grid
+      container
+      direction="row"
+      display="flex"
+      alignItems="center"
+      justify="center"
+      style={{ minWidth: '0'}}>
+
         <Grid item xs={12} sm={6} md={4}>
-          <Card className={classes.card}>
+          <Card className={classes.card} elevation={24}>
           <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -151,7 +202,7 @@ function App() {
         </Grid>
 
         <Grid item xs={12} sm={6} md={4}>
-        <Card className={classes.card}>
+        <Card className={classes.card} elevation={24}>
           <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -160,7 +211,7 @@ function App() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-           5 Main Benefits of Raising Cattle
+            5 Main Benefits of Raising Cattle
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat in quibusdam asperiores doloremque aliquid distinctio accusamus expedita dignissimos veritatis dicta laudantium consequatur ipsum nobis vel eum, sit similique obcaecati minima?
@@ -182,7 +233,7 @@ function App() {
         </Grid>
 
         <Grid item xs={12} sm={6} md={4}>
-        <Card className={classes.card}>
+        <Card className={classes.card} elevation={24}>
           <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -213,7 +264,7 @@ function App() {
         </Grid>
 
         <Grid item xs={12} sm={6} md={4}>
-        <Card className={classes.card}>
+        <Card className={classes.card} elevation={24}>
           <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -244,7 +295,7 @@ function App() {
         </Grid>
 
         <Grid item xs={12} sm={6} md={4}>
-        <Card className={classes.card}>
+        <Card className={classes.card} elevation={24}>
           <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -275,7 +326,7 @@ function App() {
         </Grid>
 
       <Grid item xs={12} sm={6} md={4}>
-          <Card className={classes.card}>
+          <Card className={classes.card} elevation={24}>
           <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -314,7 +365,7 @@ function App() {
       Most Popular
     </Typography>
 
- <Paper className={classes.root}>
+ <Paper className={classes.tabs}>
       <Tabs
         value={value}
         onChange={handleChange}
@@ -322,11 +373,23 @@ function App() {
         textColor="primary"
         centered
       >
-        <Tab label="Most Viewed" />
-        <Tab label="Most Commented" />
-        <Tab label="Most Shared" />
+        <Tab className={classes.tab1} label="Most Viewed" />
+        <Tab  className={classes.tab2} label="Most Commented" />
+        <Tab  className={classes.tab3} label="Most Shared" />
       </Tabs>
     </Paper>
+
+    <Divider variant="middle" />
+      <Typography variant="h1" className={classes.archives}>
+        View more
+      </Typography>
+    <Divider variant="middle" />
+
+    <BottomNavigation className={classes.bottomNav}>
+        <Typography className={classes.copyright}>
+          ©2020 Texas Fresh
+        </Typography>
+    </BottomNavigation>
 
     </div>
   );
