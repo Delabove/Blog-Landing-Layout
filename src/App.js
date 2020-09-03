@@ -26,11 +26,6 @@ import NewsletterForm from './components/NewsletterForm';
 
 
 
-
-
-
-
-
 const useStyles = makeStyles((theme) => ({
 
   appBar:{
@@ -57,31 +52,35 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     color: "#fff",
     fontSize: "4rem",
-
+  },
+  buttonContainer: {
+    width: 500,
+    height: 80,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
   blogsContainer: {
     paddingTop: theme.spacing(20),
-
-
   },
 
   blogTitle:{
+  paddingBottom: theme.spacing(3),
+  },
 
-    paddingBottom: theme.spacing(3),
-
+  formContainer: {
+    maxWidth: 500,
+    height: 250,
   },
 
   card: {
-
     maxWidth: '100%',
     margin: theme.spacing(3)
-
   },
 
   media: {
     height: 540,
-
   },
 
   cardActions: {
@@ -104,7 +103,7 @@ const useStyles = makeStyles((theme) => ({
   tabs: {
     marginBottom: 150,
     marginTop: 150,
-  } ,
+  },
 
   archives:{
     display: 'flex',
@@ -118,6 +117,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 30,
   },
 },
+
   bottomNav:{
     backgroundColor: "#000",
     paddingTop: theme.spacing(10),
@@ -162,7 +162,18 @@ function App() {
             Articles
           </Typography>
       </Container>
-      <NewsletterForm />
+
+    <Card className={classes.formContainer} variant="outlined">
+      <CardContent>
+        <Typography variant="h4">Newsletter Signup</Typography>
+          <NewsletterForm className={classes.newsletterForm} />
+      </CardContent>
+      <CardActions className={classes.buttonContainer}>
+          <Button variant="contained" color="primary">
+            Sign Me Up!
+          </Button>
+      </CardActions>
+    </Card>
 
       <Grid
       container
@@ -197,7 +208,7 @@ function App() {
           Share
         </Button>
         <Button size="small" color="primary">
-          Learn More
+          Read more
         </Button>
       </CardActions>
           </Card>
@@ -387,7 +398,7 @@ function App() {
       </Typography>
       <Typography className={classes.archives}>
         <Link href="#" onClick={preventDefault}color="inherit">
-           2017
+          2017
         </Link>
         <Link href="#" onClick={preventDefault} color="inherit">
           2018
