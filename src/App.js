@@ -21,6 +21,8 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Divider from '@material-ui/core/Divider';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
+import Link from '@material-ui/core/Link';
+
 
 
 
@@ -62,10 +64,6 @@ const useStyles = makeStyles((theme) => ({
 
 
   },
-
-  // gridContainer: {
-  //   marginLeft: theme.spacing(20, 'auto'), // '8px auto'
-  // },
 
   blogTitle:{
 
@@ -113,14 +111,15 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
 
     '& > *': {
-      margin: theme.spacing(5),
-      width: theme.spacing(50),
-      height: theme.spacing(50),
-      backgroundColor: '#D3D3D3',
+      margin: theme.spacing(15),
+      width: theme.spacing(2),
+      height: theme.spacing(2),
+      fontSize: 30,
   },
 },
   bottomNav:{
     backgroundColor: "#000",
+    paddingTop: theme.spacing(10),
   },
 
   copyright:{
@@ -128,8 +127,8 @@ const useStyles = makeStyles((theme) => ({
     height: '300',
     fontSize: 20,
     display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: 'start',
+    alignItems: 'start'
   }
 
 }));
@@ -143,6 +142,7 @@ function App() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+  const preventDefault = (event) => event.preventDefault();
 
   return (
     <div className="App">
@@ -383,7 +383,18 @@ function App() {
       <Typography variant="h1" className={classes.archives}>
         View more
       </Typography>
-    <Divider variant="middle" />
+      <Typography className={classes.archives}>
+        <Link href="#" onClick={preventDefault}color="inherit">
+           2017
+        </Link>
+        <Link href="#" onClick={preventDefault} color="inherit">
+          2018
+        </Link>
+        <Link href="#" onClick={preventDefault} color="inherit">
+          2019
+        </Link>
+    </Typography>
+
 
     <BottomNavigation className={classes.bottomNav}>
         <Typography className={classes.copyright}>
