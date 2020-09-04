@@ -23,6 +23,13 @@ import Divider from '@material-ui/core/Divider';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import Link from '@material-ui/core/Link';
 import NewsletterForm from './components/NewsletterForm';
+// import Navbar from '../src/components/Navbar';
+import FormControl from '@material-ui/core/FormControl';
+import InputLabel from '@material-ui/core/InputLabel';
+import Input from '@material-ui/core/Input';
+import FormHelperText from '@material-ui/core/FormHelperText';
+
+
 
 
 
@@ -135,15 +142,17 @@ function App() {
 
   return (
     <div className="App">
+
       <AppBar className={classes.appBar} position="static">
         <Toolbar>
-          <img className={classes.logo} src={Logo} alt="Logo" />
-        </Toolbar>
+            <img className={classes.logo} src={Logo} alt="Logo" />
+          </Toolbar>
       </AppBar>
-
       <Box>
         <Box className={classes.hero}> React Blog</Box>
       </Box>
+
+
 
       <Container maxWidth="lg" className={classes.blogsContainer}>
           <Typography variant="h1" className={classes.blogTitle}>
@@ -387,7 +396,33 @@ function App() {
         </Link>
     </Typography>
 
-    <NewsletterForm />
+
+    <Grid
+        container
+        direction="row"
+        display="flex"
+        alignItems="center"
+        justify="center"
+        style={{ minWidth: '0'}}>
+            <Grid item xs={12} sm={6} md={4}>
+                <Card className={classes.signUpForm} elevation={24}>
+                <CardContent>
+                    <Typography variant="h4">Hey You!</Typography>
+                    <Typography variant="h6">Enter your email address for Texas Fresh updates!</Typography>
+                    <FormControl>
+                        <InputLabel className={classes.inputLabel} htmlFor="my-input">Enter Email</InputLabel>
+                        <Input id="my-input" aria-describedby="my-helper-text" />
+                        <FormHelperText className={classes.helper} id="my-helper-text">We promise to never share your email.</FormHelperText>
+                        <React.Fragment>
+                            <Button className={classes.buttonContainer} variant="contained" color="primary">
+                                Join!
+                            </Button>
+                        </React.Fragment>
+                    </FormControl>
+                </CardContent>
+                </Card>
+            </Grid>
+            </Grid>
 
     <BottomNavigation className={classes.bottomNav}>
         <Typography className={classes.copyright}>
