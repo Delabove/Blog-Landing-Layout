@@ -121,7 +121,7 @@ function App() {
     <div className="App">
 
       <Navbar />
-      <Footer />
+
 
 
         <Box className={classes.hero} > React Blog</Box>
@@ -399,7 +399,11 @@ function App() {
                 </Card>
             </Grid>
             </Grid>
+
     </div>
+      <React.Fragment>
+      <Footer />
+      </React.Fragment>
     <MyApp/>
     </ScopedCssBaseline>
 

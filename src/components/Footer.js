@@ -1,25 +1,29 @@
 import React from 'react';
-import { makeStyles } from "@material-ui/core"
+import { makeStyles } from "@material-ui/core";
 import {
 Typography,
 Box,
 BottomNavigation
 } from "@material-ui/core"
 
+
+
+//NOT SHOWING UP ON PAGE
+
 const useStyles = makeStyles((theme) => ({
 
     bottomNav:{
+      // width: 20,
+        height: 105,
         backgroundColor: "#000",
         paddingTop: theme.spacing(10),
-      },
-
-      copyright:{
-        color: '#fff',
-        height: '300',
-        fontSize: 20,
         display: 'flex',
         justifyContent: 'start',
-        alignItems: 'start'
+        // alignItems: 'end'
+      },
+      copyright:{
+        color: '#fff',
+        fontSize: 20,
       }
 
 }));
@@ -37,7 +41,6 @@ const Footer= () => {
         </Typography>
     </BottomNavigation>
     </Box>
-
   );
 }
 
