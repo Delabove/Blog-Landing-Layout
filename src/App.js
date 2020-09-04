@@ -53,13 +53,6 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
     fontSize: "4rem",
   },
-  buttonContainer: {
-    width: 500,
-    height: 80,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
 
   blogsContainer: {
     paddingTop: theme.spacing(20),
@@ -67,11 +60,6 @@ const useStyles = makeStyles((theme) => ({
 
   blogTitle:{
   paddingBottom: theme.spacing(3),
-  },
-
-  formContainer: {
-    maxWidth: 500,
-    height: 250,
   },
 
   card: {
@@ -162,18 +150,6 @@ function App() {
             Articles
           </Typography>
       </Container>
-
-    <Card className={classes.formContainer} variant="outlined">
-      <CardContent>
-        <Typography variant="h4">Newsletter Signup</Typography>
-          <NewsletterForm className={classes.newsletterForm} />
-      </CardContent>
-      <CardActions className={classes.buttonContainer}>
-          <Button variant="contained" color="primary">
-            Sign Me Up!
-          </Button>
-      </CardActions>
-    </Card>
 
       <Grid
       container
@@ -378,7 +354,7 @@ function App() {
       Most Popular
     </Typography>
 
- <Paper className={classes.tabs}>
+    <Paper className={classes.tabs}>
       <Tabs
         value={value}
         onChange={handleChange}
@@ -394,7 +370,10 @@ function App() {
 
     <Divider variant="middle" />
       <Typography variant="h1" className={classes.archives}>
-        View more
+        Want More?
+      </Typography>
+      <Typography variant="h5" className={classes.moreContent}>
+        Click the links below for more farm fun!
       </Typography>
       <Typography className={classes.archives}>
         <Link href="#" onClick={preventDefault}color="inherit">
@@ -408,6 +387,7 @@ function App() {
         </Link>
     </Typography>
 
+    <NewsletterForm />
 
     <BottomNavigation className={classes.bottomNav}>
         <Typography className={classes.copyright}>
