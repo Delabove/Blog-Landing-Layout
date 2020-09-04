@@ -1,12 +1,11 @@
 import React from 'react';
+import ScopedCssBaseline from '@material-ui/core/ScopedCssBaseline';
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box'
 import Image from '../src/img/F.png';
-import Logo from '../src/img/logo.png';
 import { Container } from '@material-ui/core/';
 import Grid from "@material-ui/core/Grid";
 import Card from '@material-ui/core/Card';
@@ -20,32 +19,22 @@ import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Divider from '@material-ui/core/Divider';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
 import Link from '@material-ui/core/Link';
 import NewsletterForm from './components/NewsletterForm';
-// import Navbar from '../src/components/Navbar';
+import Navbar from '../src/components/Navbar';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import Input from '@material-ui/core/Input';
 import FormHelperText from '@material-ui/core/FormHelperText';
+import MyApp from './MyApp';
+import Footer from '../src/components/Footer';
+
 
 
 
 
 
 const useStyles = makeStyles((theme) => ({
-
-  appBar:{
-    backgroundColor: "#fff"
-  },
-
-  logo:{
-    width: '200px',
-    height: '200px',
-    borderRadius: '50%',
-    overflow: 'hidden',
-    position: "center",
-  },
 
   hero: {
     backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)), url(${Image})`,
@@ -113,19 +102,6 @@ const useStyles = makeStyles((theme) => ({
   },
 },
 
-  bottomNav:{
-    backgroundColor: "#000",
-    paddingTop: theme.spacing(10),
-  },
-
-  copyright:{
-    color: '#fff',
-    height: '300',
-    fontSize: 20,
-    display: 'flex',
-    justifyContent: 'start',
-    alignItems: 'start'
-  }
 
 }));
 
@@ -141,20 +117,20 @@ function App() {
   const preventDefault = (event) => event.preventDefault();
 
   return (
+    <ScopedCssBaseline>
     <div className="App">
 
-      <AppBar className={classes.appBar} position="static">
-        <Toolbar>
-            <img className={classes.logo} src={Logo} alt="Logo" />
-          </Toolbar>
-      </AppBar>
+      <Navbar />
+      <Footer />
+
+
+        <Box className={classes.hero} > React Blog</Box>
       <Box>
-        <Box className={classes.hero}> React Blog</Box>
       </Box>
 
 
 
-      <Container maxWidth="lg" className={classes.blogsContainer}>
+      <Container maxWidth="lg" className={classes.blogsContainer} style={{ margin: 0 }}>
           <Typography variant="h1" className={classes.blogTitle}>
             Articles
           </Typography>
@@ -423,14 +399,11 @@ function App() {
                 </Card>
             </Grid>
             </Grid>
-
-    <BottomNavigation className={classes.bottomNav}>
-        <Typography className={classes.copyright}>
-          ©2020 Texas Fresh
-        </Typography>
-    </BottomNavigation>
-
     </div>
+    <MyApp/>
+    </ScopedCssBaseline>
+
+
   );
 }
 
