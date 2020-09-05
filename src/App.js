@@ -29,16 +29,11 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import MyApp from './MyApp';
 import Footer from '../src/components/Footer';
 
-
-
-
-
-
 const useStyles = makeStyles((theme) => ({
 
   hero: {
     backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)), url(${Image})`,
-    height: "500px",
+    height: "800px",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
@@ -121,10 +116,11 @@ function App() {
     <div className="App">
 
       <Navbar />
+      {/* <CustomizedBreadcrumbs /> */}
 
 
 
-        <Box className={classes.hero} > React Blog</Box>
+        <Box className={classes.hero} ></Box>
       <Box>
       </Box>
 
@@ -399,7 +395,6 @@ function App() {
                 </Card>
             </Grid>
             </Grid>
-
     </div>
       <React.Fragment>
       <Footer />

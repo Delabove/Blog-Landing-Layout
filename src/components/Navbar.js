@@ -1,12 +1,8 @@
 import React from 'react';
-// import Logo from '../img/logo.png';
+import Logo from '../img/logo.png'
 import { makeStyles } from "@material-ui/core";
 import { fade } from '@material-ui/core/styles/colorManipulator';
 import SearchIcon from '@material-ui/icons/Search';
-import Breadcrumbs from '@material-ui/core/Breadcrumbs';
-import Chip from '@material-ui/core/Chip';
-import HomeIcon from '@material-ui/icons/Home';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import {
   AppBar,
   Toolbar,
@@ -25,16 +21,28 @@ import {
 const useStyles = makeStyles((theme) => ({
 
   appBar:{
+    height: 100,
     backgroundColor: "#fff",
     margin: '0',
   },
+  logoContainer:{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
 
   logo:{
-    width: '200px',
-    height: '200px',
+    height: 200,
+    width: 250,
+    marginTop: theme.spacing(16),
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor:'#EEFFD6',
     borderRadius: '50%',
-    overflow: 'hidden',
+    overflow: 'visible',
     position: "center",
+    // paddingLeft: theme.spacing(.8),
   },
   search: {
     position: 'relative',
@@ -55,6 +63,9 @@ const useStyles = makeStyles((theme) => ({
   },
   navLinks: {
     marginLeft: theme.spacing(2)
+  },
+  eyebrow: {
+
   }
 }));
 
@@ -68,11 +79,33 @@ const Navbar = () => {
     <Box component='nav'>
       <AppBar className={classes.appBar} style={{ margin: 0 }}>
           <Toolbar>
-            {/* <img className={classes.logo} src={Logo} alt="Logo" /> */}
-            <div className={classes.search}>
-            <div className={classes.searchIcon}>
+
+          <Box>
+          <Typography>
+            <Link href="#" onClick={preventDefault} className={classes.navLinks}>
+              Link1
+            </Link>
+            <Link href="#" onClick={preventDefault} className={classes.navLinks}>
+              Link2
+            </Link>
+            <Link href="#" onClick={preventDefault} className={classes.navLinks}>
+            Link3
+            </Link>
+            <Link href="#" onClick={preventDefault} className={classes.navLinks}>
+              Link4
+            </Link>
+            <Link href="#" onClick={preventDefault} className={classes.navLinks}>
+              Link5
+            </Link>
+          </Typography>
+          </Box>
+          <Box className={classes.logoContainer} style={{flexGrow : 863}}>
+            <img  className={classes.logo} src={Logo} alt=""/>
+          </Box>
+          <Box className={classes.search}>
+            <Box className={classes.searchIcon}>
               <SearchIcon />
-            </div>
+            </Box>
             <InputBase
               placeholder="Search…"
               classes={{
@@ -81,24 +114,19 @@ const Navbar = () => {
               }}
               inputProps={{ 'aria-label': 'search' }}
             />
-          </div>
-          <Typography className={classes.root}>
-    <Link href="#" onClick={preventDefault} className={classes.navLinks}>
-      Link1
-    </Link>
-    <Link href="#" onClick={preventDefault} className={classes.navLinks}>
-      Link2
-    </Link>
-    <Link href="#" onClick={preventDefault} className={classes.navLinks}>
-    Link3
-    </Link>
-    <Link href="#" onClick={preventDefault} className={classes.navLinks}>
-      Link4
-    </Link>
-    <Link href="#" onClick={preventDefault} className={classes.navLinks}>
-      Link5
-    </Link>
-</Typography>
+          </Box>
+          <Box className={classes.eyebrow} style={{flexGrow : 1}}>
+            <Link href="#" onClick={preventDefault} className={classes.navLinks}>
+              eyebrow1
+              </Link>
+              <Link href="#" onClick={preventDefault} className={classes.navLinks}>
+                eyebrow2
+              </Link>
+              <Link href="#" onClick={preventDefault} className={classes.navLinks}>
+                eyebrow3
+              </Link>
+        </Box>
+
           </Toolbar>
       </AppBar>
     </Box>
