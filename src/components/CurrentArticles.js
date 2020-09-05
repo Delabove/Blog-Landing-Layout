@@ -10,8 +10,7 @@ import Button from '@material-ui/core/Button';
 import Pagination from '@material-ui/lab/Pagination';
 import Typography from '@material-ui/core/Typography';
 import Grid from "@material-ui/core/Grid";
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
+import Box from "@material-ui/core/Box";
 
 
 
@@ -93,23 +92,19 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-
-
-
         <Grid container spacing={5} className={classes.grid}
             display="flex"
             justifyContent="center"
             alignItems="center">
-        <Grid item xs={12} md={6}
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        margin="0"
-        >
 
-                    <Card className={classes.bigCard} elevation={24}>
-                    <CardActionArea>
-                    <CardMedia
+            <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center">>
+                <Grid item xs={12} md={6}>
+                <Card className={classes.bigCard} elevation={24}>
+                <CardActionArea>
+                <CardMedia
                     className={classes.media}
                     image={require('../img/chicken.png')}
                 />
@@ -134,77 +129,82 @@ const useStyles = makeStyles((theme) => ({
                 </Button>
                 </CardActions>
                     </Card>
-        </Grid>
+                </Grid>
 
 
 
-        <Grid item xs={12} md={6}
+                <Grid item xs={12} md={6}
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center">
+                        <Card className={classes.bigCard} elevation={24}>
+                        <CardActionArea>
+                        <CardMedia
+                        className={classes.media}
+                        image={require('../img/cow.png')}
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                        5 Main Benefits of Raising Cattle
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat in quibusdam asperiores doloremque aliquid distinctio accusamus expedita dignissimos veritatis dicta laudantium consequatur ipsum nobis vel eum, sit similique obcaecati minima?
+                        </Typography>
+                        <Typography>
+                        Published: August 1, 2020
+                        </Typography>
+                    </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                    <Button size="small" color="primary">
+                        Share
+                    </Button>
+                    <Button size="small" color="primary">
+                        Learn More
+                    </Button>
+                    </CardActions>
+                        </Card>
+                </Grid>
+            </Box>
+
+            <Box
             display="flex"
             justifyContent="center"
             alignItems="center">
-                <Card className={classes.bigCard} elevation={24}>
-                <CardActionArea>
-                <CardMedia
-                className={classes.media}
-                image={require('../img/cow.png')}
-            />
-            <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                5 Main Benefits of Raising Cattle
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat in quibusdam asperiores doloremque aliquid distinctio accusamus expedita dignissimos veritatis dicta laudantium consequatur ipsum nobis vel eum, sit similique obcaecati minima?
-                </Typography>
-                <Typography>
-                Published: August 1, 2020
-                </Typography>
-            </CardContent>
-            </CardActionArea>
-            <CardActions>
-            <Button size="small" color="primary">
-                Share
-            </Button>
-            <Button size="small" color="primary">
-                Learn More
-            </Button>
-            </CardActions>
-                </Card>
-            </Grid>
+                <Grid item xs={3}
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                flexBasis="14%">
+                <Card className={classes.smallerCard} elevation={24}>
+                        <CardActionArea>
+                    <CardMedia
+                        className={classes.media}
+                        image={require('../img/eggplant.png')}
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                        Eggplants: Underestimated Veggies
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo cum, consequuntur labore, molestiae aut non suscipit possimus ab nihil in, illo facere culpa praesentium placeat. Inventore accusantium repellendus sit dolor?
+                        </Typography>
+                        <Typography>
+                        Published: August 1, 2020
+                        </Typography>
+                    </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                    <Button size="small" color="primary">
+                        Share
+                    </Button>
+                    <Button size="small" color="primary">
+                        Learn More
+                    </Button>
+                    </CardActions>
+                        </Card>
+                </Grid>
 
-
-            <Grid item xs={3}
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            flexBasis="14%">
-            <Card className={classes.smallerCard} elevation={24}>
-                    <CardActionArea>
-                <CardMedia
-                    className={classes.media}
-                    image={require('../img/eggplant.png')}
-                />
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                    Eggplants: Underestimated Veggies
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo cum, consequuntur labore, molestiae aut non suscipit possimus ab nihil in, illo facere culpa praesentium placeat. Inventore accusantium repellendus sit dolor?
-                    </Typography>
-                    <Typography>
-                    Published: August 1, 2020
-                    </Typography>
-                </CardContent>
-                </CardActionArea>
-                <CardActions>
-                <Button size="small" color="primary">
-                    Share
-                </Button>
-                <Button size="small" color="primary">
-                    Learn More
-                </Button>
-                </CardActions>
-                    </Card>
-            </Grid>
 
              <Card className={classes.smallCard} elevation={24}>
             <CardActionArea>
@@ -264,41 +264,50 @@ const useStyles = makeStyles((theme) => ({
                 </CardActions>
                     </Card>
                 </Grid>
+            </Box>
 
-                <Grid item xs={6}
+            <Box
                 display="flex"
-            justifyContent="center"
-            alignItems="center">
-                <Card className={classes.biggestCard} elevation={24}>
-                    <CardActionArea>
-                <CardMedia
-                    className={classes.media}
-                    image={require('../img/goat.png')}
-                    title="Contemplative Reptile"
-                />
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                    3 Things You Can Learn From a Goat
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam aut ducimus dolore deleniti quod. Dolores suscipit neque vel dicta, amet consectetur earum dignissimos iusto nemo officiis voluptas error, sapiente laborum.
-                    </Typography>
-                    <Typography>
-                    Published: August 1, 2020
-                    </Typography>
-                </CardContent>
-                </CardActionArea>
-                <CardActions>
-                <Button size="small" color="primary">
-                    Share
-                </Button>
-                <Button size="small" color="primary">
-                    Learn More
-                </Button>
-                </CardActions>
+                justifyContent="center"
+                alignItems="center">
+                <Grid item xs={6}>
+                    <Card className={classes.biggestCard} elevation={24}>
+                        <CardActionArea>
+                    <CardMedia
+                        className={classes.media}
+                        image={require('../img/goat.png')}
+                        title="Contemplative Reptile"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                        3 Things You Can Learn From a Goat
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam aut ducimus dolore deleniti quod. Dolores suscipit neque vel dicta, amet consectetur earum dignissimos iusto nemo officiis voluptas error, sapiente laborum.
+                        </Typography>
+                        <Typography>
+                        Published: August 1, 2020
+                        </Typography>
+                    </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                    <Button size="small" color="primary">
+                        Share
+                    </Button>
+                    <Button size="small" color="primary">
+                        Learn More
+                    </Button>
+                    </CardActions>
                     </Card>
                 </Grid>
+                </Box>
+
                 </Grid>
+
+                <Box my={4} className={classes.paginationContainer}>
+                    <Pagination count={10} />
+                </Box>
+
 
 </React.Fragment>
 

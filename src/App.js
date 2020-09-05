@@ -43,36 +43,6 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(20),
   },
 
-  // blogTitle:{
-  // paddingBottom: theme.spacing(3),
-  // },
-
-  // card: {
-  //   maxWidth: '100%',
-  //   margin: theme.spacing(3)
-  // },
-
-  // media: {
-  //   height: 540,
-  // },
-
-  // cardActions: {
-  //   display: "flex",
-  //   margin: "0 10px",
-  //   justifyContent: "space-between"
-  // },
-
-  // author: {
-  //   display: "flex"
-  // },
-
-  // paginationContainer: {
-  //   display: "flex",
-  //   justifyContent: "center",
-  //   marginBottom: 150,
-  //   marginTop: 150
-  // },
-
   tabs: {
     marginBottom: 150,
     marginTop: 150,
@@ -414,9 +384,6 @@ export default App;
 // </Grid>
 // </GridList>
 
-// <Box my={4} className={styles.paginationContainer}>
-// <Pagination count={10} />
-// </Box>
 
 // </React.Fragment>
 
