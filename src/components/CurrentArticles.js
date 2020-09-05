@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles'
-import { Container } from '@material-ui/core/';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -18,65 +17,70 @@ const useStyles = makeStyles((theme) => ({
 
 
     blogsContainer: {
-      paddingTop: theme.spacing(20),
+        paddingTop: theme.spacing(20),
     },
 
     blogTitle:{
-    paddingBottom: theme.spacing(3),
+        paddingBottom: theme.spacing(3),
+    },
+    grid: {
+        flexGrow:1,
+        display: 'flex',
+        justifyContent: 'center',
     },
 
-    smallerCard: {
-
-      height:700,
-
-    },
     smallCard: {
-        width:800,
-        height:700,
-
-      },
-      biggestSmallCard: {
-
-        height:700,
-
-      },
+        margin: theme.spacing(.6),
+        width:479,
+        height:625,
+    },
 
     bigCard: {
-        maxWidth:'100%',
-        maxHeight:'100%',
+        width: 727,
+        height: 971,
         margin: theme.spacing(.3)
-      },
+    },
 
-      biggestCard: {
-        maxWidth:'100%',
-        maxHeight:'100%',
+    biggestCard: {
+        maxWidth: '100%',
+        height: 971,
         margin: theme.spacing(.3)
-      },
+    },
 
     media: {
-      height: 900,
+        width: 1000,
+        height: 755,
+    },
+    smallMedia: {
+        maxWidth: '100%',
+        height: 400
+    },
+    biggestMedia: {
+        maxWidth: '100%',
+        height: 755,
+
     },
 
     cardActions: {
-      display: "flex",
-      margin: "0 10px",
-      justifyContent: "space-between"
+        display: "flex",
+        margin: "0 10px",
+        justifyContent: "space-between"
     },
 
     author: {
-      display: "flex"
+        display: "flex"
     },
 
     paginationContainer: {
-      display: "flex",
-      justifyContent: "center",
-      marginBottom: 150,
-      marginTop: 150
+        display: "flex",
+        justifyContent: "center",
+        marginBottom: 150,
+        marginTop: 150
     },
 
-  }));
+}));
 
-  const CurrentArticles = () => {
+const CurrentArticles = () => {
 
     const classes = useStyles();
 
@@ -84,23 +88,20 @@ const useStyles = makeStyles((theme) => ({
     return(
         <React.Fragment>
 
-        <Container maxWidth="lg" className={classes.blogsContainer} style={{ margin: 0 }}>
+
             <Typography variant="h1" className={classes.blogTitle}>
             Articles
             </Typography>
-        </Container>
 
 
 
-        <Grid container spacing={5} className={classes.grid}
-            display="flex"
-            justifyContent="center"
-            alignItems="center">
+
+        <Grid container spacing={5} className={classes.grid}>
 
             <Box
                 display="flex"
                 justifyContent="center"
-                alignItems="center">>
+                alignItems="center">
                 <Grid item xs={12} md={6}>
                 <Card className={classes.bigCard} elevation={24}>
                 <CardActionArea>
@@ -125,7 +126,7 @@ const useStyles = makeStyles((theme) => ({
                     Share
                 </Button>
                 <Button size="small" color="primary">
-                    Learn More
+                    Read More
                 </Button>
                 </CardActions>
                     </Card>
@@ -160,7 +161,7 @@ const useStyles = makeStyles((theme) => ({
                         Share
                     </Button>
                     <Button size="small" color="primary">
-                        Learn More
+                        Read More
                     </Button>
                     </CardActions>
                         </Card>
@@ -171,15 +172,12 @@ const useStyles = makeStyles((theme) => ({
             display="flex"
             justifyContent="center"
             alignItems="center">
-                <Grid item xs={3}
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-                flexBasis="14%">
-                <Card className={classes.smallerCard} elevation={24}>
+                <Grid item xs={4}
+                >
+                <Card className={classes.smallCard} elevation={24}>
                         <CardActionArea>
                     <CardMedia
-                        className={classes.media}
+                        className={classes.smallMedia}
                         image={require('../img/eggplant.png')}
                     />
                     <CardContent>
@@ -199,17 +197,17 @@ const useStyles = makeStyles((theme) => ({
                         Share
                     </Button>
                     <Button size="small" color="primary">
-                        Learn More
+                        Read More
                     </Button>
                     </CardActions>
                         </Card>
                 </Grid>
 
-
-             <Card className={classes.smallCard} elevation={24}>
+            <Grid item xs={4}>
+            <Card className={classes.smallCard} elevation={24}>
             <CardActionArea>
             <CardMedia
-                    className={classes.media}
+                    className={classes.smallMedia}
                     image={require('../img/farm.png')}
                     title="Contemplative Reptile"
                 />
@@ -230,15 +228,16 @@ const useStyles = makeStyles((theme) => ({
                     Share
                 </Button>
                 <Button size="small" color="primary">
-                    Learn More
+                    Read More
                 </Button>
                 </CardActions>
                     </Card>
+                </Grid>
                     <Grid item xs={4}>
-                    <Card className={classes.biggestSmallCard} elevation={24}>
+                    <Card className={classes.smallCard} elevation={24}>
                     <CardActionArea>
                 <CardMedia
-                    className={classes.media}
+                    className={classes.smallMedia}
                     image={require('../img/squash.png')}
                     title="Contemplative Reptile"
                 />
@@ -259,7 +258,7 @@ const useStyles = makeStyles((theme) => ({
                     Share
                 </Button>
                 <Button size="small" color="primary">
-                    Learn More
+                    Read More
                 </Button>
                 </CardActions>
                     </Card>
@@ -268,13 +267,12 @@ const useStyles = makeStyles((theme) => ({
 
             <Box
                 display="flex"
-                justifyContent="center"
-                alignItems="center">
-                <Grid item xs={6}>
+                maxWidth='100%'>
+                <Grid item xs={12}>
                     <Card className={classes.biggestCard} elevation={24}>
                         <CardActionArea>
                     <CardMedia
-                        className={classes.media}
+                        className={classes.biggestMedia}
                         image={require('../img/goat.png')}
                         title="Contemplative Reptile"
                     />
@@ -295,7 +293,7 @@ const useStyles = makeStyles((theme) => ({
                         Share
                     </Button>
                     <Button size="small" color="primary">
-                        Learn More
+                        Read More
                     </Button>
                     </CardActions>
                     </Card>
@@ -314,10 +312,10 @@ const useStyles = makeStyles((theme) => ({
 
 
     );
-  }
+}
 
 
-  export default CurrentArticles;
+export default CurrentArticles;
 
 
 
