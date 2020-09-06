@@ -27,8 +27,6 @@ function App() {
     </Switch>
 
 
-
-        {/* <PopularArticles /> */}
         <NewsLetterForm />
         <Footer />
         <MyApp/>
