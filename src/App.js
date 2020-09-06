@@ -7,7 +7,9 @@ import CurrentArticles from '../src/components/CurrentArticles';
 import PopularArticles from '../src/components/PopularArticles';
 import Header from '../src/components/Header';
 import NewsLetterForm from '../src/components/NewsletterForm';
+import SideBar from '../src/components/SideBar';
 import {Switch, Route, Redirect } from 'react-router-dom';
+import Home from './components';
 
 
 
@@ -18,9 +20,10 @@ function App() {
   return (
     <ScopedCssBaseline>
     <div className="App">
-        <Navbar />
-        <Header />
+        <Home />
+        {/* <Header /> */}
         <CurrentArticles />
+        {/* <SideBar /> */}
 
     <Switch>
         <Route exact path="/" render={props => <PopularArticles{...props} />} />
@@ -29,6 +32,7 @@ function App() {
 
         <NewsLetterForm />
         <Footer />
+
         <MyApp/>
     </div>
     </ScopedCssBaseline>
