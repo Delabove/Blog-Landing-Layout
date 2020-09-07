@@ -7,8 +7,8 @@ import Container from '@material-ui/core/Container';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
-import {Switch, Route, Redirect } from 'react-router-dom';
 import Main from './components/Main';
+import Typography from '@material-ui/core/Typography';
 import Navbar from './components/Navbar.js';
 import Sidebar from './components/SideBar';
 import Footer from './components/Footer';
@@ -16,10 +16,18 @@ import PopularArticles from './components/PopularArticles';
 import MainContentGrid from './components/MainContentGrid';
 
 
+
 const useStyles = makeStyles((theme) => ({
   mainGrid: {
-    marginTop: theme.spacing(3),
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: theme.spacing(12),
   },
+  sidebarGrid:{
+    display: 'flex',
+    justifyContent: 'flex-end'
+  }
 
 }));
 
@@ -30,7 +38,7 @@ const sections = [
   { title: 'Seasonal Crops', url: '#' },
   { title: 'Farm Equipment', url: '#' },
 ];
-  //
+
 
   const posts = [];
 
@@ -67,19 +75,32 @@ function App() {
     <Container maxWidth="lg">
         <Navbar title="Blog" sections={sections} />
         <main>
+        <Grid container spacing={4}>
+             <MainContentGrid />
+        </Grid>
 
           <Grid container spacing={5} className={classes.mainGrid}>
+          <Grid item xs={12} >
+            <Typography variant="h3">
+            Reader's Choice
+            </Typography>
+            </Grid>
 
-            <MainContentGrid />
-            <Main title="Reader's Choice" posts={posts} />
-            <PopularArticles/>
+            <Grid item xs={6} >
+              <PopularArticles/>
+            </Grid>
+
+            <Grid item xs={6} className={classes.sidebarGrid}>
             <Sidebar className={classes.sidebar}
-              title={sidebar.title}
-              description={sidebar.description}
-              archives={sidebar.archives}
-              social={sidebar.social}
-            />
+                float='right'
+                title={sidebar.title}
+                description={sidebar.description}
+                archives={sidebar.archives}
+                social={sidebar.social}
+              />
+            </Grid>
           </Grid>
+
         </main>
       </Container>
       <Footer />
@@ -141,8 +162,3 @@ export default App;
   // ];
 
 
-          {/* <Grid container spacing={4}>
-            {currentArticles.map((post) => (
-              <CurrentArticles key={post.title} post={post} />
-            ))}
-          </Grid> */}

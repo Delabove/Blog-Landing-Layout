@@ -1,5 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
@@ -18,9 +20,17 @@ const useStyles = makeStyles((theme) => ({
         overflow: 'hidden',
         backgroundColor: theme.palette.background.paper,
       },
+      grid:{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center'
+      },
       gridList: {
         width: 1000,
         height: 1000,
+        display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center'
       },
       titleBar: {
         background:
@@ -42,6 +52,10 @@ export default function CurrentArticles(post){
     return(
     <React.Fragment>
             <div className={classes.root}>
+            <Typography variant="h1" className={classes.blogTitle}>
+            Articles
+             </Typography>
+             <Grid container spacing={5} className={classes.grid}>
                 <GridList cellHeight={300}  spacing={30} className={classes.gridList}>
                     <GridListTile key="Subheader" cols={4} style={{ height: 'auto' }}>
                     <ListSubheader component="div"></ListSubheader>
@@ -60,10 +74,10 @@ export default function CurrentArticles(post){
                     </GridListTile>
                     ))}
                 </GridList>
+                </Grid>
             </div>
-    );
-    </React.Fragment>
-    );
+         </React.Fragment>
+    )
 }
 
 

@@ -9,7 +9,7 @@ import goat from '../img/goat.png';
 
 const postData = [
     {
-      title: 'Featured post',
+      title: 'Post title',
       date: 'Nov 12',
       description:
         'This is a wider card with supporting text below as a natural lead-in to additional content.',
@@ -25,7 +25,7 @@ const postData = [
       imageText: 'Image Text',
     },
     {
-      title: 'Featured post',
+      title: 'Post title',
       date: 'Nov 12',
       description:
         'This is a wider card with supporting text below as a natural lead-in to additional content.',
