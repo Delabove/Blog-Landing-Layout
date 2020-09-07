@@ -7,18 +7,19 @@ import Container from '@material-ui/core/Container';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
-import Main from './components/Main';
+import Header from './components/Header';
 import Typography from '@material-ui/core/Typography';
 import Navbar from './components/Navbar.js';
 import Sidebar from './components/SideBar';
 import Footer from './components/Footer';
 import PopularArticles from './components/PopularArticles';
 import MainContentGrid from './components/MainContentGrid';
+import NewsletterForm from './components/NewsletterForm';
 
 
 
 const useStyles = makeStyles((theme) => ({
-  mainGrid: {
+  bottomGrid: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -28,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'flex-end'
   }
-
 }));
 
 const sections = [
@@ -38,9 +38,6 @@ const sections = [
   { title: 'Seasonal Crops', url: '#' },
   { title: 'Farm Equipment', url: '#' },
 ];
-
-
-  const posts = [];
 
   const sidebar = {
     title: 'About',
@@ -74,12 +71,13 @@ function App() {
     <div className="App">
     <Container maxWidth="lg">
         <Navbar title="Blog" sections={sections} />
+        <Header/>
         <main>
         <Grid container spacing={4}>
-             <MainContentGrid />
+          <MainContentGrid />
         </Grid>
 
-          <Grid container spacing={5} className={classes.mainGrid}>
+          <Grid container spacing={5} className={classes.bottomGrid}>
           <Grid item xs={12} >
             <Typography variant="h3">
             Reader's Choice
@@ -102,6 +100,7 @@ function App() {
           </Grid>
 
         </main>
+        <NewsletterForm />
       </Container>
       <Footer />
         <MyApp/>

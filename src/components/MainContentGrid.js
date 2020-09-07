@@ -52,7 +52,7 @@ export default function CurrentArticles(post){
     return(
     <React.Fragment>
             <div className={classes.root}>
-            <Typography variant="h1" className={classes.blogTitle}>
+            <Typography variant="h1" className={classes.blogTitle} spacing={5}>
             Articles
              </Typography>
              <Grid container spacing={5} className={classes.grid}>
