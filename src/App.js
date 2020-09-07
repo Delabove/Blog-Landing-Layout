@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/styles';
 import ScopedCssBaseline from '@material-ui/core/ScopedCssBaseline';
 import MyApp from './MyApp';
 import Grid from '@material-ui/core/Grid';
-import CurrentArticles from '../src/components/CurrentArticles';
 import Container from '@material-ui/core/Container';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -14,25 +13,14 @@ import Navbar from './components/Navbar.js';
 import Sidebar from './components/SideBar';
 import Footer from './components/Footer';
 import PopularArticles from './components/PopularArticles';
+import MainContentGrid from './components/MainContentGrid';
 
 
 const useStyles = makeStyles((theme) => ({
   mainGrid: {
     marginTop: theme.spacing(3),
   },
-  sidebar:{
-    flexGrow: 5
-  }
-//   imageList {
-//     display: grid,
-//     gridTemplateColumns: repeat(auto-fill, minmax(250px, 1fr)),
-//     gridGap: '10px',
-//     gridAutoRows: '200px',
-// }
 
-// .image-list img {
-//     width: 250px;
-// }
 }));
 
 const sections = [
@@ -42,48 +30,7 @@ const sections = [
   { title: 'Seasonal Crops', url: '#' },
   { title: 'Farm Equipment', url: '#' },
 ];
-  const currentArticles = [
-    {
-      title: 'Featured post',
-      date: 'Nov 12',
-      description:
-        'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: '../src/img/chicken.png',
-      imageText: 'Image Text',
-    },
-    {
-      title: 'Post title',
-      date: 'Nov 11',
-      description:
-        'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: '../src/img/cow.png',
-      imageText: 'Image Text',
-    },
-    {
-      title: 'Featured post',
-      date: 'Nov 12',
-      description:
-        'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: '../src/img/eggplant.png',
-      imageText: 'Image Text',
-    },
-    {
-      title: 'Post title',
-      date: 'Nov 11',
-      description:
-        'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: '../img/farm.png',
-      imageText: 'Image Text',
-    },
-    {
-      title: 'Post title',
-      date: 'Nov 11',
-      description:
-        'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: '../src/img/goat.png',
-      imageText: 'Image Text',
-    },
-  ];
+  //
 
   const posts = [];
 
@@ -110,14 +57,7 @@ const sections = [
       { name: 'Facebook', icon: FacebookIcon },
     ],
   };
-  // const GridLayout = (props) => (
-  //   <div id="mainContent" className="container" style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gridGap: '10px', gridAutoRows: 'minMax(100px, auto)'}}>
-  //     {this.props.articles.map((article) => (
-  //       <div>
-  //         <ArticleCard articleDetails={article}/>
-  //       </div>
-  //     ))}
-  //   </div>
+
 
 function App() {
   const classes = useStyles();
@@ -128,12 +68,9 @@ function App() {
         <Navbar title="Blog" sections={sections} />
         <main>
 
-          <Grid container spacing={4}>
-            {currentArticles.map((post) => (
-              <CurrentArticles key={post.title} post={post} />
-            ))}
-          </Grid>
           <Grid container spacing={5} className={classes.mainGrid}>
+
+            <MainContentGrid />
             <Main title="Reader's Choice" posts={posts} />
             <PopularArticles/>
             <Sidebar className={classes.sidebar}
@@ -156,3 +93,56 @@ function App() {
 }
 
 export default App;
+
+
+
+
+// const currentArticles = [
+  //   {
+  //     title: 'Featured post',
+  //     date: 'Nov 12',
+  //     description:
+  //       'This is a wider card with supporting text below as a natural lead-in to additional content.',
+  //       image: '../src/img/chicken.png',
+  //     imageText: 'Image Text',
+  //   },
+  //   {
+  //     title: 'Post title',
+  //     date: 'Nov 11',
+  //     description:
+  //       'This is a wider card with supporting text below as a natural lead-in to additional content.',
+  //       image: '../src/img/cow.png',
+  //     imageText: 'Image Text',
+  //   },
+  //   {
+  //     title: 'Featured post',
+  //     date: 'Nov 12',
+  //     description:
+  //       'This is a wider card with supporting text below as a natural lead-in to additional content.',
+  //       image: '../src/img/eggplant.png',
+  //     imageText: 'Image Text',
+  //   },
+  //   {
+  //     title: 'Post title',
+  //     date: 'Nov 11',
+  //     description:
+  //       'This is a wider card with supporting text below as a natural lead-in to additional content.',
+  //       image: '../img/farm.png',
+  //     imageText: 'Image Text',
+  //   },
+  //   {
+  //     title: 'Post title',
+  //     date: 'Nov 11',
+  //     description:
+  //       'This is a wider card with supporting text below as a natural lead-in to additional content.',
+  //       image: '../src/img/goat.png',
+  //     imageText: 'Image Text',
+  //   },
+  // ];
+
+
+          {/* <Grid container spacing={4}>
+            {currentArticles.map((post) => (
+              <CurrentArticles key={post.title} post={post} />
+            ))}
+          </Grid> */}
