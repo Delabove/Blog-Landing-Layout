@@ -15,6 +15,8 @@ import Footer from './components/Footer';
 import PopularArticles from './components/PopularArticles';
 import MainContentGrid from './components/MainContentGrid';
 import NewsletterForm from './components/NewsletterForm';
+import Divider from '@material-ui/core/Divider';
+import Box from '@material-ui/core/Box';
 
 
 
@@ -27,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   },
   sidebarGrid:{
     display: 'flex',
-    justifyContent: 'flex-end'
+    justifyContent: 'center'
   }
 }));
 
@@ -77,28 +79,20 @@ function App() {
           <MainContentGrid />
         </Grid>
 
-          <Grid container spacing={5} className={classes.bottomGrid}>
-          <Grid item xs={12} >
-            <Typography variant="h2">
-            Reader's Choice
-            </Typography>
-            </Grid>
 
-            <Grid item xs={6} >
-              <PopularArticles/>
-            </Grid>
-
-            <Grid item xs={6} className={classes.sidebarGrid}>
-            <Sidebar className={classes.sidebar}
-                float='right'
-                title={sidebar.title}
-                description={sidebar.description}
-                archives={sidebar.archives}
-                social={sidebar.social}
-              />
-            </Grid>
-          </Grid>
-
+          <Grid container spacing={1} className={classes.bottomGrid}>
+              <Grid item xs={12} md={6} className={classes.sidebarGrid}>
+              <PopularArticles />
+              </Grid>
+                <Grid item xs={12} md={6} className={classes.sidebarGrid}>
+                <Sidebar className={classes.sidebar}
+                    title={sidebar.title}
+                    description={sidebar.description}
+                    archives={sidebar.archives}
+                    social={sidebar.social}
+                  />
+                </Grid>
+              </Grid>
         </main>
         <NewsletterForm />
       </Container>

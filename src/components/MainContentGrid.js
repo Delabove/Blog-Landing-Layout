@@ -32,6 +32,9 @@ const useStyles = makeStyles((theme) => ({
           justifyContent: 'center',
           alignItems: 'center'
       },
+      sectionTitle: {
+        margin: theme.spacing(15)
+      },
       titleBar: {
         background:
           'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
@@ -52,7 +55,7 @@ export default function CurrentArticles(post){
     return(
     <React.Fragment>
             <div className={classes.root}>
-            <Typography variant="h1" className={classes.blogTitle} spacing={5}>
+            <Typography variant="h1" className={classes.sectionTitle} spacing={5}>
             Articles
              </Typography>
              <Grid container spacing={5} className={classes.grid}>
