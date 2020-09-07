@@ -79,7 +79,7 @@ function App() {
 
           <Grid container spacing={5} className={classes.bottomGrid}>
           <Grid item xs={12} >
-            <Typography variant="h3">
+            <Typography variant="h2">
             Reader's Choice
             </Typography>
             </Grid>
