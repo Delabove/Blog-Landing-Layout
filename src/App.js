@@ -20,19 +20,27 @@ const useStyles = makeStyles((theme) => ({
   mainGrid: {
     marginTop: theme.spacing(3),
   },
+  sidebar:{
+    flexGrow: 5
+  }
+//   imageList {
+//     display: grid,
+//     gridTemplateColumns: repeat(auto-fill, minmax(250px, 1fr)),
+//     gridGap: '10px',
+//     gridAutoRows: '200px',
+// }
+
+// .image-list img {
+//     width: 250px;
+// }
 }));
 
 const sections = [
-  { title: 'Technology', url: '#' },
-  { title: 'Design', url: '#' },
-  { title: 'Culture', url: '#' },
-  { title: 'Business', url: '#' },
-  { title: 'Politics', url: '#' },
-  { title: 'Opinion', url: '#' },
-  { title: 'Science', url: '#' },
-  { title: 'Health', url: '#' },
-  { title: 'Style', url: '#' },
-  { title: 'Travel', url: '#' },
+  { title: 'Farm Life', url: '#' },
+  { title: 'Farming Basics', url: '#' },
+  { title: 'Livestock', url: '#' },
+  { title: 'Seasonal Crops', url: '#' },
+  { title: 'Farm Equipment', url: '#' },
 ];
   const currentArticles = [
     {
@@ -40,7 +48,7 @@ const sections = [
       date: 'Nov 12',
       description:
         'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: '../img/chicken.png',
+        image: '../src/img/chicken.png',
       imageText: 'Image Text',
     },
     {
@@ -48,7 +56,7 @@ const sections = [
       date: 'Nov 11',
       description:
         'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: '../img/cow.png',
+        image: '../src/img/cow.png',
       imageText: 'Image Text',
     },
     {
@@ -56,7 +64,7 @@ const sections = [
       date: 'Nov 12',
       description:
         'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: '../img/eggplant.png',
+        image: '../src/img/eggplant.png',
       imageText: 'Image Text',
     },
     {
@@ -72,7 +80,7 @@ const sections = [
       date: 'Nov 11',
       description:
         'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        image: '../img/goat.png',
+        image: '../src/img/goat.png',
       imageText: 'Image Text',
     },
   ];
@@ -82,19 +90,19 @@ const sections = [
   const sidebar = {
     title: 'About',
     description:
-      'Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.',
+      'We are an amazing company with equally amazing values!',
     archives: [
       { title: 'March 2020', url: '#' },
       { title: 'February 2020', url: '#' },
       { title: 'January 2020', url: '#' },
       { title: 'November 1999', url: '#' },
-      { title: 'October 1999', url: '#' },
-      { title: 'September 1999', url: '#' },
-      { title: 'August 1999', url: '#' },
-      { title: 'July 1999', url: '#' },
-      { title: 'June 1999', url: '#' },
-      { title: 'May 1999', url: '#' },
-      { title: 'April 1999', url: '#' },
+      { title: 'October 2019', url: '#' },
+      { title: 'September 2019', url: '#' },
+      { title: 'August 2019', url: '#' },
+      { title: 'July 2019', url: '#' },
+      { title: 'June 2019', url: '#' },
+      { title: 'May 2019', url: '#' },
+      { title: 'April 2019', url: '#' },
     ],
     social: [
       { name: 'GitHub', icon: GitHubIcon },
@@ -102,6 +110,14 @@ const sections = [
       { name: 'Facebook', icon: FacebookIcon },
     ],
   };
+  // const GridLayout = (props) => (
+  //   <div id="mainContent" className="container" style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gridGap: '10px', gridAutoRows: 'minMax(100px, auto)'}}>
+  //     {this.props.articles.map((article) => (
+  //       <div>
+  //         <ArticleCard articleDetails={article}/>
+  //       </div>
+  //     ))}
+  //   </div>
 
 function App() {
   const classes = useStyles();
@@ -120,7 +136,7 @@ function App() {
           <Grid container spacing={5} className={classes.mainGrid}>
             <Main title="Reader's Choice" posts={posts} />
             <PopularArticles/>
-            <Sidebar
+            <Sidebar className={classes.sidebar}
               title={sidebar.title}
               description={sidebar.description}
               archives={sidebar.archives}

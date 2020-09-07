@@ -3,10 +3,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import MostViews from './MostViews';
 import MostShares from './MostShares';
 import MostComments from './MostComments';
-import Typography from '@material-ui/core/Typography';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
+import Grid from '@material-ui/core/Grid';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const PopularArticles = () => {
-    const classes = useStyles();
+    // const classes = useStyles();
 
     const [selectedTab, setSelectedTab] = React.useState(0);
     const handleChange = (event, newValue) => {
@@ -32,19 +32,17 @@ const PopularArticles = () => {
 
 
 <>
-     <Box
+     <Grid
      display="flex"
      justifyContent="center"
      alignItems="center">
-    {/* <Typography variant="h1" className={classes.bestList}>
-        Reader's Choice
-    </Typography> */}
-    </Box>
+
+
 
     <Box
     display="flex"
-     justifyContent="center"
-     alignItems="center">
+    justifyContent="center"
+    alignItems="center">
             <Tabs value={selectedTab} onChange={handleChange} >
                 <Tab label="Favorite Reads" />
                 <Tab label="Most Talked About"  />
@@ -56,12 +54,13 @@ const PopularArticles = () => {
 <Box
     display="flex"
     justifyContent="center"
-    alignItems="center"
->
+    alignItems="center">
+
     {selectedTab === 0 && <MostViews />}
     {selectedTab === 1 && <MostComments />}
     {selectedTab === 2 && <MostShares />}
 </Box>
+</Grid>
 </>
 
 
