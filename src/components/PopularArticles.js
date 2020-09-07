@@ -36,9 +36,9 @@ const PopularArticles = () => {
      display="flex"
      justifyContent="center"
      alignItems="center">
-    <Typography variant="h1" className={classes.bestList}>
+    {/* <Typography variant="h1" className={classes.bestList}>
         Reader's Choice
-    </Typography>
+    </Typography> */}
     </Box>
 
     <Box

@@ -126,9 +126,6 @@ export default function CurrentArticles(props){
                             <Button size="small" color="primary">
                                 Share
                             </Button>
-                            <Button size="small" color="primary">
-                                Continue Reading
-                            </Button>
                         </CardActions>
                     </Card>
                 </Grid>
@@ -162,9 +159,6 @@ export default function CurrentArticles(props){
                         <CardActions>
                             <Button size="small" color="primary">
                                 Share
-                            </Button>
-                            <Button size="small" color="primary">
-                                Continue Reading
                             </Button>
                         </CardActions>
                     </Card>
@@ -204,9 +198,6 @@ export default function CurrentArticles(props){
                         <Button size="small" color="primary">
                             Share
                         </Button>
-                        <Button size="small" color="primary">
-                            Continue Reading
-                        </Button>
                     </CardActions>
                     </Card>
                 </Grid>
@@ -239,9 +230,6 @@ export default function CurrentArticles(props){
                             <Button size="small" color="primary">
                                 Share
                             </Button>
-                            <Button size="small" color="primary">
-                                Continue Reading
-                            </Button>
                         </CardActions>
                     </Card>
                 </Grid>
@@ -273,9 +261,6 @@ export default function CurrentArticles(props){
                         <CardActions>
                             <Button size="small" color="primary">
                                 Share
-                            </Button>
-                            <Button size="small" color="primary">
-                                Continue Reading
                             </Button>
                         </CardActions>
                     </Card>
@@ -313,9 +298,6 @@ export default function CurrentArticles(props){
                         <CardActions>
                         <Button size="small" color="primary">
                             Share
-                        </Button>
-                        <Button size="small" color="primary">
-                            Continue Reading
                         </Button>
                         </CardActions>
                     </Card>

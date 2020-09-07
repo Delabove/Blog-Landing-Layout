@@ -13,6 +13,7 @@ import Main from './components/Main';
 import Navbar from './components/Navbar.js';
 import Sidebar from './components/SideBar';
 import Footer from './components/Footer';
+import PopularArticles from './components/PopularArticles';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -117,7 +118,8 @@ function App() {
             ))}
           </Grid>
           <Grid container spacing={5} className={classes.mainGrid}>
-            <Main title="Title of something." posts={posts} />
+            <Main title="Reader's Choice" posts={posts} />
+            <PopularArticles/>
             <Sidebar
               title={sidebar.title}
               description={sidebar.description}
@@ -127,7 +129,7 @@ function App() {
           </Grid>
         </main>
       </Container>
-      <Footer title="Footer" description="Something here to give the footer a purpose!" />
+      <Footer />
         <MyApp/>
     </div>
     </ScopedCssBaseline>
