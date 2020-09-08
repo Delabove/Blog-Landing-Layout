@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
         flexWrap: 'wrap',
         justifyContent: 'space-around',
         overflow: 'hidden',
-        backgroundColor: theme.palette.background.paper,
+
       },
       blogTitle:{
           marginBottom: theme.spacing(5)
@@ -49,53 +49,44 @@ const classes = useStyles();
           <Tab>Farm Equipment</Tab>
         </TabList>
         <TabPanel>
-          <Link>Husband of Marge; father of Bart, Lisa, and Maggie.</Link>
+        <Box>
+        <Link>Why We Traded The City for the Farm</Link>
+        </Box>
+        <Box>
+        <Link>Our Favorite Days on the Farm Look Like This</Link>
+        </Box>
         </TabPanel>
         <TabPanel>
-          <Link>Wife of Homer; mother of Bart, Lisa, and Maggie.</Link>
-
+        <Box>
+        <Link>Why We Traded The City for the Farm</Link>
+        </Box>
+        <Box>
+        <Link>Our Favorite Days on the Farm Look Like This</Link>
+        </Box>
         </TabPanel>
         <TabPanel>
-          <Link>Oldest child and only son of Homer and Marge; brother of Lisa and Maggie.</Link>
-
+        <Box>
+        <Link>Why We Traded The City for the Farm</Link>
+        </Box>
+        <Box>
+        <Link>Our Favorite Days on the Farm Look Like This</Link>
+        </Box>
         </TabPanel>
         <TabPanel>
-          <Link>Middle child and eldest daughter of Homer and Marge; sister of Bart and Maggie.</Link>
-
+        <Box>
+        <Link>Why We Traded The City for the Farm</Link>
+        </Box>
+        <Box>
+        <Link>Our Favorite Days on the Farm Look Like This</Link>
+        </Box>
         </TabPanel>
         <TabPanel>
-          <Link>Youngest child and daughter of Homer and Marge; sister of Bart and Lisa.</Link>
-
-        </TabPanel>
-      </Tabs>
-    </TabPanel>
-    <TabPanel>
-      <Tabs forceRenderTabPanel>
-        <TabList>
-          <Tab>Farm Life</Tab>
-          <Tab>Farm Basics</Tab>
-          <Tab>Livestock</Tab>
-          <Tab>Seasonal Crops</Tab>
-          <Tab>Farm Equipment</Tab>
-        </TabList>
-        <TabPanel>
-          <Link>Husband of Marge; father of Bart, Lisa, and Maggie.</Link>
-        </TabPanel>
-        <TabPanel>
-          <Link>Wife of Homer; mother of Bart, Lisa, and Maggie.</Link>
-
-        </TabPanel>
-        <TabPanel>
-          <Link>Oldest child and only son of Homer and Marge; brother of Lisa and Maggie.</Link>
-
-        </TabPanel>
-        <TabPanel>
-          <Link>Middle child and eldest daughter of Homer and Marge; sister of Bart and Maggie.</Link>
-
-        </TabPanel>
-        <TabPanel>
-          <Link>Youngest child and daughter of Homer and Marge; sister of Bart and Lisa.</Link>
-
+        <Box>
+        <Link>Why We Traded The City for the Farm</Link>
+        </Box>
+        <Box>
+        <Link>Our Favorite Days on the Farm Look Like This</Link>
+        </Box>
         </TabPanel>
       </Tabs>
     </TabPanel>
@@ -109,23 +100,95 @@ const classes = useStyles();
           <Tab>Farm Equipment</Tab>
         </TabList>
         <TabPanel>
-          <Link>Husband of Marge; father of Bart, Lisa, and Maggie.</Link>
+        <Box>
+        <Link>Why We Traded The City for the Farm</Link>
+        </Box>
+        <Box>
+        <Link>Our Favorite Days on the Farm Look Like This</Link>
+        </Box>
         </TabPanel>
         <TabPanel>
-          <Link>Wife of Homer; mother of Bart, Lisa, and Maggie.</Link>
-
+        <Box>
+        <Link>Why We Traded The City for the Farm</Link>
+        </Box>
+        <Box>
+        <Link>Our Favorite Days on the Farm Look Like This</Link>
+        </Box>
         </TabPanel>
         <TabPanel>
-          <Link>Oldest child and only son of Homer and Marge; brother of Lisa and Maggie.</Link>
-
+        <Box>
+        <Link>Why We Traded The City for the Farm</Link>
+        </Box>
+        <Box>
+        <Link>Our Favorite Days on the Farm Look Like This</Link>
+        </Box>
         </TabPanel>
         <TabPanel>
-          <Link>Middle child and eldest daughter of Homer and Marge; sister of Bart and Maggie.</Link>
-
+        <Box>
+        <Link>Why We Traded The City for the Farm</Link>
+        </Box>
+        <Box>
+        <Link>Our Favorite Days on the Farm Look Like This</Link>
+        </Box>
         </TabPanel>
         <TabPanel>
-          <Link>Youngest child and daughter of Homer and Marge; sister of Bart and Lisa.</Link>
-
+        <Box>
+        <Link>Why We Traded The City for the Farm</Link>
+        </Box>
+        <Box>
+        <Link>Our Favorite Days on the Farm Look Like This</Link>
+        </Box>
+        </TabPanel>
+      </Tabs>
+    </TabPanel>
+    <TabPanel>
+      <Tabs forceRenderTabPanel>
+        <TabList>
+          <Tab>Farm Life</Tab>
+          <Tab>Farm Basics</Tab>
+          <Tab>Livestock</Tab>
+          <Tab>Seasonal Crops</Tab>
+          <Tab>Farm Equipment</Tab>
+        </TabList>
+        <TabPanel>
+        <Box>
+        <Link>Why We Traded The City for the Farm</Link>
+        </Box>
+        <Box>
+        <Link>Our Favorite Days on the Farm Look Like This</Link>
+        </Box>
+        </TabPanel>
+        <TabPanel>
+        <Box>
+        <Link>Why We Traded The City for the Farm</Link>
+        </Box>
+        <Box>
+        <Link>Our Favorite Days on the Farm Look Like This</Link>
+        </Box>
+        </TabPanel>
+        <TabPanel>
+        <Box>
+        <Link>Why We Traded The City for the Farm</Link>
+        </Box>
+        <Box>
+        <Link>Our Favorite Days on the Farm Look Like This</Link>
+        </Box>
+        </TabPanel>
+        <TabPanel>
+        <Box>
+        <Link>Why We Traded The City for the Farm</Link>
+        </Box>
+        <Box>
+        <Link>Our Favorite Days on the Farm Look Like This</Link>
+        </Box>
+        </TabPanel>
+        <TabPanel>
+        <Box>
+        <Link>Why We Traded The City for the Farm</Link>
+        </Box>
+        <Box>
+        <Link>Our Favorite Days on the Farm Look Like This</Link>
+        </Box>
         </TabPanel>
       </Tabs>
     </TabPanel>

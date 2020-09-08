@@ -37,8 +37,8 @@ export default function NewsLetterSignUp() {
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
-        <Typography component="h1" variant="h5">
-          Join Our Farm Family!
+        <Typography component="h1" variant="h6">
+          Subscribe to our Texas Fresh Newsletter!
         </Typography>
         <form className={classes.form} noValidate>
           <Grid container spacing={2}>

@@ -8,15 +8,12 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import Header from './components/Header';
-import Typography from '@material-ui/core/Typography';
 import Navbar from './components/Navbar.js';
 import Sidebar from './components/SideBar';
 import Footer from './components/Footer';
 import PopularArticles from './components/PopularArticles';
 import MainContentGrid from './components/MainContentGrid';
 import NewsletterForm from './components/NewsletterForm';
-import Divider from '@material-ui/core/Divider';
-import Box from '@material-ui/core/Box';
 
 
 
@@ -29,7 +26,8 @@ const useStyles = makeStyles((theme) => ({
   },
   sidebarGrid:{
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'flex-end',
+
   }
 }));
 
@@ -71,34 +69,34 @@ function App() {
   return (
     <ScopedCssBaseline>
     <div className="App">
-    <Container maxWidth="lg">
-        <Navbar title="Blog" sections={sections} />
-        <Header/>
-        <main>
-        <Grid container spacing={4}>
-          <MainContentGrid />
-        </Grid>
+      <Container maxWidth="lg">
+          <Navbar title="Blog" sections={sections} />
+          <Header/>
+          <main>
+            <Grid container spacing={4}>
+              <MainContentGrid />
+            </Grid>
 
 
-          <Grid container spacing={1} className={classes.bottomGrid}>
-              <Grid item xs={12} md={6} className={classes.sidebarGrid}>
-              <PopularArticles />
-              </Grid>
+            <Grid container spacing={1} className={classes.bottomGrid}>
                 <Grid item xs={12} md={6} className={classes.sidebarGrid}>
-                <Sidebar className={classes.sidebar}
-                    title={sidebar.title}
-                    description={sidebar.description}
-                    archives={sidebar.archives}
-                    social={sidebar.social}
-                  />
+                <PopularArticles />
                 </Grid>
-              </Grid>
-        </main>
-        <NewsletterForm />
-      </Container>
-      <Footer />
+                  <Grid item xs={12} md={6} className={classes.sidebarGrid}>
+                  <Sidebar className={classes.sidebar}
+                      title={sidebar.title}
+                      description={sidebar.description}
+                      archives={sidebar.archives}
+                      social={sidebar.social}
+                    />
+                  </Grid>
+                </Grid>
+          </main>
+          <NewsletterForm />
+          </Container>
+        <Footer />
         <MyApp/>
-    </div>
+      </div>
     </ScopedCssBaseline>
 
 
@@ -107,51 +105,5 @@ function App() {
 }
 
 export default App;
-
-
-
-
-// const currentArticles = [
-  //   {
-  //     title: 'Featured post',
-  //     date: 'Nov 12',
-  //     description:
-  //       'This is a wider card with supporting text below as a natural lead-in to additional content.',
-  //       image: '../src/img/chicken.png',
-  //     imageText: 'Image Text',
-  //   },
-  //   {
-  //     title: 'Post title',
-  //     date: 'Nov 11',
-  //     description:
-  //       'This is a wider card with supporting text below as a natural lead-in to additional content.',
-  //       image: '../src/img/cow.png',
-  //     imageText: 'Image Text',
-  //   },
-  //   {
-  //     title: 'Featured post',
-  //     date: 'Nov 12',
-  //     description:
-  //       'This is a wider card with supporting text below as a natural lead-in to additional content.',
-  //       image: '../src/img/eggplant.png',
-  //     imageText: 'Image Text',
-  //   },
-  //   {
-  //     title: 'Post title',
-  //     date: 'Nov 11',
-  //     description:
-  //       'This is a wider card with supporting text below as a natural lead-in to additional content.',
-  //       image: '../img/farm.png',
-  //     imageText: 'Image Text',
-  //   },
-  //   {
-  //     title: 'Post title',
-  //     date: 'Nov 11',
-  //     description:
-  //       'This is a wider card with supporting text below as a natural lead-in to additional content.',
-  //       image: '../src/img/goat.png',
-  //     imageText: 'Image Text',
-  //   },
-  // ];
 
 

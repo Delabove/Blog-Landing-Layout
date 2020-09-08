@@ -9,44 +9,49 @@ import goat from '../img/goat.png';
 
 const postData = [
     {
-      title: 'Post title',
-      date: 'Nov 12',
+      title: 'Post Title',
+      date: 'Published: August 5, 2020',
       description:
         'This is a wider card with supporting text below as a natural lead-in to additional content.',
-        img: chickens,
+      img: chickens,
       imageText: 'Image Text',
+      readTime: '2 min Read'
     },
     {
       title: 'Post title',
-      date: 'Nov 11',
+      date: 'Published: August 5, 2020',
       description:
         'This is a wider card with supporting text below as a natural lead-in to additional content.',
         img: cows,
       imageText: 'Image Text',
+      readTime: '2 min Read'
     },
     {
       title: 'Post title',
-      date: 'Nov 12',
+      date: 'Published: August 5, 2020',
       description:
         'This is a wider card with supporting text below as a natural lead-in to additional content.',
         img: eggplant,
       imageText: 'Image Text',
+      readTime: '2 min Read'
     },
     {
       title: 'Post title',
-      date: 'Nov 11',
+      date: 'Published: August 5, 2020',
       description:
         'This is a wider card with supporting text below as a natural lead-in to additional content.',
         img: farm,
       imageText: 'Image Text',
+      readTime: '2 min Read'
     },
     {
       title: 'Post title',
-      date: 'Nov 11',
+      date: 'Published: August 5, 2020',
       description:
         'This is a wider card with supporting text below as a natural lead-in to additional content.',
         img: goat,
       imageText: 'Image Text',
+      readTime: '2 min Read'
     },
   ];
 
