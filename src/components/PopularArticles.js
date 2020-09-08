@@ -35,9 +35,9 @@ const classes = useStyles();
     </Typography>
     <Tabs forceRenderTabPanel defaultIndex={1}>
     <TabList>
-      <Tab>Fave Reads</Tab>
+      <Tab>Favorite Reads</Tab>
       <Tab>Most Talked About</Tab>
-      <Tab>Sharables</Tab>
+      <Tab>Most Shared</Tab>
     </TabList>
     <TabPanel>
       <Tabs forceRenderTabPanel>

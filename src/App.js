@@ -70,7 +70,7 @@ function App() {
     <ScopedCssBaseline>
     <div className="App">
       <Container maxWidth="lg">
-          <Navbar title="Blog" sections={sections} />
+          <Navbar title="" sections={sections} />
           <Header/>
           <main>
             <Grid container spacing={4}>
