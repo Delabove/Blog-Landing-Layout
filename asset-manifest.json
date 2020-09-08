@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.js": "/React-Blog-Layout/static/js/main.513c2be4.chunk.js",
+    "main.js.map": "/React-Blog-Layout/static/js/main.513c2be4.chunk.js.map",
+    "runtime-main.js": "/React-Blog-Layout/static/js/runtime-main.388044ac.js",
+    "runtime-main.js.map": "/React-Blog-Layout/static/js/runtime-main.388044ac.js.map",
+    "static/css/2.5c17b9f1.chunk.css": "/React-Blog-Layout/static/css/2.5c17b9f1.chunk.css",
+    "static/js/2.68601fe6.chunk.js": "/React-Blog-Layout/static/js/2.68601fe6.chunk.js",
+    "static/js/2.68601fe6.chunk.js.map": "/React-Blog-Layout/static/js/2.68601fe6.chunk.js.map",
+    "index.html": "/React-Blog-Layout/index.html",
+    "precache-manifest.550fcb731c2aace23725c35386f713b2.js": "/React-Blog-Layout/precache-manifest.550fcb731c2aace23725c35386f713b2.js",
+    "service-worker.js": "/React-Blog-Layout/service-worker.js",
+    "static/css/2.5c17b9f1.chunk.css.map": "/React-Blog-Layout/static/css/2.5c17b9f1.chunk.css.map",
+    "static/js/2.68601fe6.chunk.js.LICENSE.txt": "/React-Blog-Layout/static/js/2.68601fe6.chunk.js.LICENSE.txt",
+    "static/media/HeroImage.png": "/React-Blog-Layout/static/media/HeroImage.35a79d56.png",
+    "static/media/chicken.png": "/React-Blog-Layout/static/media/chicken.4244940e.png",
+    "static/media/cow.png": "/React-Blog-Layout/static/media/cow.3fd81099.png",
+    "static/media/eggplant.png": "/React-Blog-Layout/static/media/eggplant.1c81f763.png",
+    "static/media/farm.png": "/React-Blog-Layout/static/media/farm.4dbec4b6.png",
+    "static/media/goat.png": "/React-Blog-Layout/static/media/goat.0cb770b8.png",
+    "static/media/logo.png": "/React-Blog-Layout/static/media/logo.915e6d3f.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.388044ac.js",
+    "static/css/2.5c17b9f1.chunk.css",
+    "static/js/2.68601fe6.chunk.js",
+    "static/js/main.513c2be4.chunk.js"
+  ]
+}
