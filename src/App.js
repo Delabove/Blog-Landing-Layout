@@ -70,8 +70,10 @@ function App() {
     <ScopedCssBaseline>
     <div className="App">
       <Container maxWidth="lg">
+        <Grid xs={12}>
           <Navbar title="" sections={sections} />
           <Header/>
+          </Grid>
           <main>
             <Grid container spacing={4}>
               <MainContentGrid />
@@ -105,7 +107,3 @@ function App() {
 }
 
 export default App;
-
-
-//testing changes before deployment
-//testing changes before deployment
