@@ -69,7 +69,7 @@ export default function CurrentArticles(post){
             Articles
              </Typography>
              <Grid container xs={12} md={6}  spacing={5} className={classes.grid}>
-                <GridList cellHeight={580}  spacing={5} className={classes.gridList}>
+                <GridList xs={12} md={6} cellHeight={580}  spacing={5} className={classes.gridList}>
                     <GridListTile key="Subheader" cols={4} style={{ height: 'auto' }}>
                     <ListSubheader component="div"></ListSubheader>
                     </GridListTile>
