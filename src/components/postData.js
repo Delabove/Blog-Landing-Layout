@@ -21,7 +21,7 @@ const postData = [
       title: 'Farm Raised Beef',
       date: 'Published: August 5, 2020',
       description:
-        'By raising your own animals, you have complete control over their health and welfare, which ultimately leads to that same control over your own.',
+        'By raising your own animals, you have complete control over their health and welfare, which ultimately leads to that...',
         img: cows,
       imageText: 'Image Text',
       readTime: '2 min read'
@@ -39,7 +39,7 @@ const postData = [
       title: 'Why We Traded the City for the Farm',
       date: 'Published: August 5, 2020',
       description:
-        'Why do children that live in the country have less stress? A study by Environment and Behavior showed that kids with natural scenery have less stress than those who don’t. Even in an office environment, it has been proven that staff with nature-like wall-prints, were less stressed than wall-prints depicting cities.',
+        'Why do children that live in the country have less stress? A study by Environment and Behavior showed that kids with...',
         img: farm,
       imageText: 'Image Text',
       readTime: '2 min read'
