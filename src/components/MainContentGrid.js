@@ -18,11 +18,9 @@ import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'space-around',
-        // overflow: 'hidden',
-        backgroundColor: theme.palette.background.paper,
+      maxWidth: 345,
+    [theme.breakpoints.down("md")] : {
+    maxWidth: 200
       },
       grid:{
           display: 'flex',
