@@ -14,109 +14,86 @@ import Link from '@material-ui/core/Link';
 import Box from '@material-ui/core/Box';
 
 
-
-
 const useStyles = makeStyles((theme) => ({
-    root: {
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    marginTop: theme.spacing(5)
+
+  },
+  gridList: {
+
+    width: 500,
+    height: 1200,
+
+  },
+  card: {
+
       maxWidth: 345,
-    [theme.breakpoints.down("md")] : {
-    maxWidth: 200
-      },
-      grid:{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center'
-      },
-      gridList: {
-        width: 1000,
-        height: 2000,
-        display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center'
-      },
-      sectionTitle: {
-        marginTop: theme.spacing(10)
-      },
-      description: {
-        marginTop: theme.spacing(3),
-      },
-      icon: {
-        color: 'rgba(255, 255, 255, 0.54)',
-      },
-      card: {
-        maxWidth: 845,
 
-      },
-      cardActions: {
-        marginRight: theme.spacing(10)
-      }
-    }));
+  },
+  mainTitle: {
+    textAlign: 'center',
+    marginTop: theme.spacing(12)
+  },
+}));
 
+export default function AdvancedGridList() {
+  const classes = useStyles();
 
+  return (
+<>
+    <Typography className={classes.mainTitle} variant='h2'>
+            Recent Articles
+    </Typography>
+    <div className={classes.root}>
+      <GridList cellHeight={400} spacing={1} className={classes.gridList} cols={6}>
+{postData.map((post) => (
+  <Grid xs={12} md={6}>
+  <Card  key={post.img} className={classes.card} cols={post.cols || 1}>
+      <CardMedia className={classes.card}
+        component="img"
+        alt={post.title}
+        height="140"
+        image={post.img}
+        title="Blog Posts"
+      />
+      <CardContent xs={12} md={6} >
+        <Typography gutterBottom variant="h5" component="h2">
+          {post.title}
+          </Typography>
+          <Typography>
+          {post.date}
+          </Typography>
+        <Typography>
+          {post.readTime}
+        </Typography>
+        <Box className={classes.description}>
+          <Typography variant="body2" color="textSecondary" component="p">
+          {post.description}
+          </Typography>
+          </Box>
+        </CardContent>
+      <CardActions className={classes.cardActions}>
 
-export default function CurrentArticles(post){
+            <Link color="primary">
+              Share
+            </Link>
+            <Link color="primary">
+           Continue Reading
+          </Link>
+      </CardActions>
+  </Card>
+  </Grid>
+        ))}
 
-    const classes = useStyles();
+      </GridList>
 
-
-
-    return(
-    <React.Fragment>
-            <div className={classes.root}>
-            <Typography variant="h1" className={classes.sectionTitle} spacing={5}>
-            Articles
-             </Typography>
-             <Grid container xs={12} md={6}  spacing={5} className={classes.grid}>
-                <GridList xs={12} md={6} cellHeight={580}  spacing={5} className={classes.gridList}>
-                    <GridListTile key="Subheader" cols={4} style={{ height: 'auto' }}>
-                    <ListSubheader component="div"></ListSubheader>
-                    </GridListTile>
-                    {postData.map((post) => (
-                    <Card key={post.img} className={classes.card}>
-                        <CardMedia
-                          component="img"
-                          alt={post.title}
-                          height="350"
-                          image={post.img}
-                          title="Blog Posts"
-                        />
-                        <CardContent >
-                          <Typography gutterBottom variant="h5" component="h2">
-                            {post.title}
-                            </Typography>
-                            <Typography>
-                            {post.date}
-                            </Typography>
-                          <Typography>
-                            {post.readTime}
-                          </Typography>
-                          <Box className={classes.description}>
-                            <Typography>
-                            {post.description}
-                            </Typography>
-                            </Box>
-                          </CardContent>
-                        <CardActions className={classes.cardActions}>
-
-                              <Link color="primary">
-                                Share
-                              </Link>
-                              <Link color="primary">
-                             Continue Reading
-                            </Link>
-                        </CardActions>
-                    </Card>
-                    ))}
-                </GridList>
-                </Grid>
-            </div>
-    </React.Fragment>
+    </div>
+    </>
     )
 }
-
-
-
-
 
 
 

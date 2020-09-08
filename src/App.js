@@ -14,6 +14,7 @@ import Footer from './components/Footer';
 import PopularArticles from './components/PopularArticles';
 import MainContentGrid from './components/MainContentGrid';
 import NewsletterForm from './components/NewsletterForm';
+import Hidden from '@material-ui/core/Hidden'
 
 
 
@@ -27,7 +28,14 @@ const useStyles = makeStyles((theme) => ({
   sidebarGrid:{
     display: 'flex',
     justifyContent: 'flex-end',
-
+  },
+  sidebar: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+  },
+  archives: {
+    display: 'flex',
+    justifyContent: 'flex-end',
   }
 }));
 
@@ -76,26 +84,31 @@ function App() {
           <Header/>
           </Grid>
           <main>
-            <Grid item xs={12} md={6} container spacing={4}>
               <MainContentGrid />
-            </Grid>
-
-
             <Grid container spacing={1} className={classes.bottomGrid}>
                 <Grid item xs={12} md={6} className={classes.sidebarGrid}>
                 <PopularArticles />
                 </Grid>
-                  <Grid item xs={12} md={6} className={classes.sidebarGrid}>
+                </Grid>
+                <Grid container
+                  display='flex'
+                  justifyContent='center'
+                  alignContent='center'>
+                  <Grid item xs={12} md={6}  className={classes.sidebarGrid}>
+                    <NewsletterForm />
+                  </Grid>
+                  <Hidden smDown>
+                  <Grid item xs={12} md={6} className={classes.archives}>
                   <Sidebar className={classes.sidebar}
                       title={sidebar.title}
                       description={sidebar.description}
                       archives={sidebar.archives}
                       social={sidebar.social}
                     />
-                  </Grid>
-                </Grid>
+                    </Grid>
+                    </Hidden>
+              </Grid>
           </main>
-          <NewsletterForm />
           </Container>
         <Footer />
         <MyApp/>

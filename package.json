@@ -2,10 +2,7 @@
   "name": "blog-landing",
   "version": "0.1.0",
   "private": true,
-<<<<<<< HEAD
   "homepage": "http://delabove.github.io/React-Blog-Layout",
-=======
->>>>>>> bcb59eb8cabbab2c12c3c39127e5a6a73f8e7eed
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
@@ -22,6 +19,7 @@
     "react-copyright": "0.0.1",
     "react-css-grid": "^2.0.0-0",
     "react-dom": "^16.13.1",
+    "react-masonry-css": "^1.0.14",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-scroll": "^1.8.1",

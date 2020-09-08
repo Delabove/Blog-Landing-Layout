@@ -12,7 +12,7 @@ const postData = [
       title: 'Farm Fresh Eggs: The Perfect Comeback',
       date: 'Published: August 5, 2020',
       description:
-        'It is more important than ever to get your family eating fresh, farm raised food. Especially eggs!',
+        'Why the sudden interest to raise chickens!',
       img: chickens,
       imageText: 'Image Text',
       readTime: '2 min read'
@@ -21,7 +21,7 @@ const postData = [
       title: 'Farm Raised Beef',
       date: 'Published: August 5, 2020',
       description:
-        'By raising your own animals, you have complete control over their health and welfare, which ultimately leads to that...',
+        'By raising your own animals, you have complete control over their health and welfare, which ultimately leads to the same control over your own.',
         img: cows,
       imageText: 'Image Text',
       readTime: '2 min read'
@@ -30,7 +30,7 @@ const postData = [
       title: 'Undervalued Veggies',
       date: 'Published: August 5, 2020',
       description:
-        'Did you know there are 7 surprising health benefits of eating eggplants?',
+        'Did you know there are 7 surprising health benefits of eating eggplants? Here is a must read list!',
         img: eggplant,
       imageText: 'Image Text',
       readTime: '2 min read'
