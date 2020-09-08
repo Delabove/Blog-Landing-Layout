@@ -70,10 +70,15 @@ function App() {
     <ScopedCssBaseline>
     <div className="App">
       <Container maxWidth="lg">
+<<<<<<< HEAD
         <Grid xs={12}>
           <Navbar title="" sections={sections} />
           <Header/>
           </Grid>
+=======
+          <Navbar title="" sections={sections} />
+          <Header/>
+>>>>>>> bcb59eb8cabbab2c12c3c39127e5a6a73f8e7eed
           <main>
             <Grid container spacing={4}>
               <MainContentGrid />
@@ -107,3 +112,8 @@ function App() {
 }
 
 export default App;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> bcb59eb8cabbab2c12c3c39127e5a6a73f8e7eed
