@@ -25,10 +25,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     marginTop: theme.spacing(12),
   },
-  sidebarGrid:{
-    display: 'flex',
-    justifyContent: 'flex-end',
-  },
+
   sidebar: {
     display: 'flex',
     justifyContent: 'flex-end',
