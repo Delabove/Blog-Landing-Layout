@@ -68,7 +68,7 @@ export default function CurrentArticles(post){
             <Typography variant="h1" className={classes.sectionTitle} spacing={5}>
             Articles
              </Typography>
-             <Grid container spacing={5} className={classes.grid}>
+             <Grid container xs={12} md={6}  spacing={5} className={classes.grid}>
                 <GridList cellHeight={580}  spacing={5} className={classes.gridList}>
                     <GridListTile key="Subheader" cols={4} style={{ height: 'auto' }}>
                     <ListSubheader component="div"></ListSubheader>
