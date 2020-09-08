@@ -29,11 +29,8 @@
     "react-tabs": "^3.1.1"
   },
   "scripts": {
-<<<<<<< HEAD
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-=======
->>>>>>> bcb59eb8cabbab2c12c3c39127e5a6a73f8e7eed
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
@@ -53,11 +50,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-<<<<<<< HEAD
   },
   "devDependencies": {
     "gh-pages": "^3.1.0"
-=======
->>>>>>> bcb59eb8cabbab2c12c3c39127e5a6a73f8e7eed
   }
 }
