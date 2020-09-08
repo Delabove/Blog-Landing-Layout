@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
           alignItems: 'center'
       },
       sectionTitle: {
-        margin: theme.spacing(5)
+        marginTop: theme.spacing(10)
       },
       titleBar: {
         background:
@@ -109,7 +109,7 @@ export default function CurrentArticles(post){
                 </GridList>
                 </Grid>
             </div>
-         </React.Fragment>
+    </React.Fragment>
     )
 }
 
