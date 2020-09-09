@@ -16,8 +16,8 @@ const useStyles = makeStyles((theme) => ({
         overflow: 'hidden',
 
       },
-      mainTitle:{
-        textAlign: 'center',
+      blogTitle:{
+          marginBottom: theme.spacing(5)
       }
 
     }));
@@ -28,7 +28,7 @@ const classes = useStyles();
     return(
 
  <div className={classes.root}>
-    <Typography variant="h2" className={classes.mainTitle} spacing={5}
+    <Typography variant="h2" className={classes.blogTitle} spacing={5}
     display="flex"
     justifyContent="start">
            Reader's Choice

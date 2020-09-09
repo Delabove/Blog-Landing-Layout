@@ -12,6 +12,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import Link from '@material-ui/core/Link';
 import Box from '@material-ui/core/Box';
+import { TabList, TabPanel } from 'react-tabs';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -94,6 +95,4 @@ export default function AdvancedGridList() {
     </>
     )
 }
-
-
 

@@ -7,7 +7,7 @@ import goat from '../img/goat.png';
 
 
 
-const archiveData = [
+const popularData = [
     {
         category: 'Favorite Reads',
         subcategory: 'Farm Life',
@@ -67,22 +67,22 @@ const archiveData = [
     {
         category: 'Most Talked About',
         subcategory: 'Farm Life',
-        title: 'Why We Traded The City for the Farm',
+        title: 'A Day On The Farm',
 
     },
     {
         category: 'Most Talked About',
         subcategory: 'Farm Life',
-        title: 'Our Favorite Days on the Farm Look Like This',
+        title: 'My Favorite Season On The Farm',
     },
     {category: 'Most Talked About',
     subcategory: 'Farm Basics',
-    title: 'Grain Bin Safety',
+    title: 'How Much Water Do Farmers Manage',
     },
     {
         category: 'Most Talked About',
         subcategory: 'Farm Basics',
-        title: 'Soil pH',
+        title: 'Nutrient Availability',
     },
     {
         category: 'Most Talked About',
@@ -92,27 +92,27 @@ const archiveData = [
     {
         category: 'Most Talked About',
         subcategory: 'Livestock',
-        title: 'The Most Common Livestock For Your Farm',
+        title: 'The Healthiest Livestock To Raise For The Fridge',
 
     },
     {
         category: 'Most Talked About',
         subcategory: 'Seasonal Crops',
-        title: 'Dog Days of Summer',
+        title: 'Interested In Growing Beets?',
     },
     {
         category: 'Most Talked About',
         subcategory: 'Seasonal Crops',
-        title: 'Easiest Fall Crops',
+        title: 'Beans: A Warm Weather Favorite',
     },
     {category: 'Most Talked About',
     subcategory: 'Farm Equipment',
-    title: 'Essential Equipment for Small Farms',
+    title: 'Must Have Blades To Have On Hand At All Times',
     },
     {
         category: 'Most Talked About',
         subcategory: 'Farm Equipment',
-        title: 'Rotary Tillers: Why They Are Necessary',
+        title: 'Lawn Care Equipment',
     },
 
 
@@ -123,54 +123,54 @@ const archiveData = [
     {
         category: 'Most Shared',
         subcategory: 'Farm Life',
-        title: 'Farm Fresh Eggs: The Perfect Comeback',
+        title: 'How We Started Farming',
 
     },
     {
         category: 'Most Shared',
         subcategory: 'Farm Life',
-        title: 'Farm Fresh Eggs: The Perfect Comeback',
+        title: 'The Main Reason I Love Farm Life',
     },
     {category: 'Most Shared',
-    subcategory: 'Farm Life',
-    title: 'Farm Fresh Eggs: The Perfect Comeback',
+    subcategory: 'Farm Basics',
+    title: 'Grass Waterways',
     },
     {
         category: 'Most Shared',
-        subcategory: 'Farm Life',
-        title: 'Farm Fresh Eggs: The Perfect Comeback',
+        subcategory: 'Farm Basics',
+        title: 'How Farmers Pick Their Planting Population',
     },
     {
         category: 'Most Shared',
-        subcategory: 'Farm Life',
-        title: 'Farm Fresh Eggs: The Perfect Comeback',
+        subcategory: 'Livestock',
+        title: 'The Processing of Home Grown Meat',
     },
     {
         category: 'Most Shared',
-        subcategory: 'Farm Life',
-        title: 'Farm Fresh Eggs: The Perfect Comeback',
+        subcategory: 'Livestock',
+        title: 'Dairy Cattle: The Good and The Bad',
 
     },
     {
         category: 'Most Shared',
-        subcategory: 'Farm Life',
-        title: 'Farm Fresh Eggs: The Perfect Comeback',
+        subcategory: 'Seasonal Crops',
+        title: 'How the Heat Affects Crops',
     },
     {
         category: 'Most Shared',
-        subcategory: 'Farm Life',
-        title: 'Farm Fresh Eggs: The Perfect Comeback',
+        subcategory: 'Seasonal Crops',
+        title: 'Preparing For Winter',
     },
     {
         category: 'Most Shared',
-        subcategory: 'Farm Life',
-        title: 'Farm Fresh Eggs: The Perfect Comeback',
+        subcategory: 'Farm Equipment',
+        title: 'Our Most Used Tractor',
     },
     {
         category: 'Most Shared',
-        subcategory: 'Farm Life',
-        title: 'Farm Fresh Eggs: The Perfect Comeback',
+        subcategory: 'Farm Equipment',
+        title: 'My Favorite Old Pickup Truck',
     },
   ];
 
-  export default archiveData;
+  export default popularData;

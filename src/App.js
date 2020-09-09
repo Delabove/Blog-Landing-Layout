@@ -91,11 +91,11 @@ function App() {
                   display='flex'
                   justifyContent='center'
                   alignContent='center'>
-                  <Grid item xs={12} md={6}  className={classes.sidebarGrid}>
+                  <Grid item xs={12} md={8}  className={classes.sidebarGrid}>
                     <NewsletterForm />
                   </Grid>
                   <Hidden smDown>
-                  <Grid item xs={12} md={6} className={classes.archives}>
+                  <Grid item xs={12} md={4} className={classes.archives}>
                   <Sidebar className={classes.sidebar}
                       title={sidebar.title}
                       description={sidebar.description}
