@@ -14,7 +14,9 @@ import Footer from './components/Footer';
 import PopularArticles from './components/PopularArticles';
 import MainContentGrid from './components/MainContentGrid';
 import NewsletterForm from './components/NewsletterForm';
-import Hidden from '@material-ui/core/Hidden'
+import Hidden from '@material-ui/core/Hidden';
+import { BrowserRouter } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 
 
 
@@ -72,9 +74,12 @@ const sections = [
 function App() {
   const classes = useStyles();
   return (
+
     <ScopedCssBaseline>
     <div className="App">
-      <Container maxWidth="lg">
+    <BrowserRouter>
+        <ScrollToTop>
+        <Container maxWidth="lg">
         <Grid xs={12}
         >
           <Navbar title="" sections={sections} />
@@ -107,8 +112,12 @@ function App() {
               </Grid>
           </main>
           </Container>
-        <Footer />
+
+          <Footer />
         <MyApp/>
+
+        </ScrollToTop>
+      </BrowserRouter>
       </div>
     </ScopedCssBaseline>
 
