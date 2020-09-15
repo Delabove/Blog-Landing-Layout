@@ -18,22 +18,20 @@ import { TabList, TabPanel } from 'react-tabs';
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    marginTop: theme.spacing(5)
+    // flexWrap: 'wrap',
+    justifyContent: 'center',
+    marginTop: theme.spacing(5),
+
 
   },
-  gridList: {
 
-    width: 500,
-    height: 1200,
-
-  },
   card: {
 
       maxWidth: 345,
+      height: "100%"
 
   },
+
   mainTitle: {
     textAlign: 'center',
     marginTop: theme.spacing(12)
@@ -49,14 +47,14 @@ export default function AdvancedGridList() {
             Recent Articles
     </Typography>
     <div className={classes.root}>
-      <GridList cellHeight={400} spacing={1} className={classes.gridList} cols={6}>
-{postData.map((post) => (
+
+  {postData.map((post) => (
   <Grid xs={12} md={6}>
   <Card  key={post.img} className={classes.card} cols={post.cols || 1}>
-      <CardMedia className={classes.card}
+      <CardMedia className={classes.cardMedia}
         component="img"
+        height="150"
         alt={post.title}
-        height="140"
         image={post.img}
         title="Blog Posts"
       />
@@ -88,9 +86,6 @@ export default function AdvancedGridList() {
   </Card>
   </Grid>
         ))}
-
-      </GridList>
-
     </div>
     </>
     )

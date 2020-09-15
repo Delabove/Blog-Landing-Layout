@@ -26,11 +26,16 @@ const classes = useStyles();
       <Tab>Title 2</Tab>
     </TabList>
 
+    <TabList>
+      <Tab>Title 1</Tab>
+      <Tab>Title 2</Tab>
+    </TabList>
+
     <TabPanel>
-      <h2>Any content 1</h2>
+      <Link> Link 1 </Link>
     </TabPanel>
     <TabPanel>
-      <h2>Any content 2</h2>
+      <Link> link 2 </Link>
     </TabPanel>
   </Tabs>
 );
