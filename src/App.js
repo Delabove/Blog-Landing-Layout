@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import ScopedCssBaseline from '@material-ui/core/ScopedCssBaseline';
 import MyApp from './MyApp';
@@ -11,12 +11,13 @@ import Header from './components/Header';
 import Navbar from './components/Navbar.js';
 import Sidebar from './components/SideBar';
 import Footer from './components/Footer';
-import PopularArticles from './components/PopularArticles';
 import MainContentGrid from './components/MainContentGrid';
 import NewsletterForm from './components/NewsletterForm';
 import Hidden from '@material-ui/core/Hidden';
 import { BrowserRouter } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
+import categories from './components/popularPostData.js';
+import DataTreeView from './components/DataTreeView';
 
 
 
@@ -89,7 +90,7 @@ function App() {
               <MainContentGrid />
             <Grid container spacing={1} className={classes.bottomGrid}>
                 <Grid item xs={12} md={6} className={classes.sidebarGrid}>
-                <PopularArticles />
+                <DataTreeView treeItems={categories}/>
                 </Grid>
                 </Grid>
                 <Grid container

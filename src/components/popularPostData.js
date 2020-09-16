@@ -97,7 +97,7 @@ const categories = [
                  subcategories: [
                 {
                     subject: 'Seasonal Crops',
-                    id: 'sesonalCrops-id',
+                    id: 'seasonalCrops-id',
                     post: [{ title: 'Easiest Fall Crops'}],
                 },
             ],
