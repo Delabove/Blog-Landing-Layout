@@ -21,6 +21,7 @@ import DataTreeView from './components/DataTreeView';
 
 
 
+
 const useStyles = makeStyles((theme) => ({
   bottomGrid: {
     display: 'flex',
@@ -90,7 +91,7 @@ function App() {
               <MainContentGrid />
             <Grid container spacing={1} className={classes.bottomGrid}>
                 <Grid item xs={12} md={6} className={classes.sidebarGrid}>
-                <DataTreeView treeItems={categories}/>
+                <DataTreeView/>
                 </Grid>
                 </Grid>
                 <Grid container
