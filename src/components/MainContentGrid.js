@@ -18,7 +18,7 @@ import { TabList, TabPanel } from 'react-tabs';
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    // flexWrap: 'wrap',
+    flexWrap: 'wrap',
     justifyContent: 'center',
     marginTop: theme.spacing(5),
 
@@ -49,7 +49,7 @@ export default function AdvancedGridList() {
     <div className={classes.root}>
 
   {postData.map((post) => (
-  <Grid xs={12} md={6}>
+  <Grid xs={12} sm={6} md={3}>
   <Card  key={post.img} className={classes.card} cols={post.cols || 1}>
       <CardMedia className={classes.cardMedia}
         component="img"
@@ -58,7 +58,7 @@ export default function AdvancedGridList() {
         image={post.img}
         title="Blog Posts"
       />
-      <CardContent xs={12} md={6} >
+      <CardContent xs={12}  md={6} >
         <Typography gutterBottom variant="h5" component="h2">
           {post.title}
           </Typography>

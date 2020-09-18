@@ -79,9 +79,10 @@ function App() {
 
     <ScopedCssBaseline>
     <div className="App">
+
     <BrowserRouter>
         <ScrollToTop>
-        <Container maxWidth="lg">
+        <Container maxWidth={false}>
         <Grid xs={12}
         >
           <Navbar title="" sections={sections} />
@@ -120,6 +121,7 @@ function App() {
 
         </ScrollToTop>
       </BrowserRouter>
+
       </div>
     </ScopedCssBaseline>
 
