@@ -23,12 +23,14 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(5),
 
 
+
   },
 
   card: {
 
-      maxWidth: 345,
-      height: "100%"
+      maxWidth: 485,
+      height: "100%",
+
 
   },
 
@@ -49,11 +51,12 @@ export default function AdvancedGridList() {
     <div className={classes.root}>
 
   {postData.map((post) => (
-  <Grid xs={12} sm={6} md={3}>
+  <Grid xs={12} sm={6} md={4}
+    marginTop="40">
   <Card  key={post.img} className={classes.card} cols={post.cols || 1}>
       <CardMedia className={classes.cardMedia}
         component="img"
-        height="150"
+        height="300"
         alt={post.title}
         image={post.img}
         title="Blog Posts"
